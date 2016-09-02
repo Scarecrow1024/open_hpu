@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>本学期成绩</title>
+</head>
+<style type="text/css">
+table.gridtable {
+  font-family: verdana,arial,sans-serif;
+  font-size:18px;
+  color:#333333;
+  border-width: 1px;
+  border-color: #666666;
+  border-collapse: collapse;
+}
+table.gridtable th {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #dedede;
+}
+table.gridtable td {
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #666666;
+  background-color: #ffffff;
+}
+footer{background-color:#f8f8f8;color:#666;position: fixed;bottom: 0px;width: 100%;padding: 10px;text-align: center;}
+</style>
+<body>
+    <h2>本学期成绩查询结果</h2>
+    <h4>如果未显示出成绩说明验证码或密码输错，或者教务系统崩溃</h4>
+    <table id="tab1" class="gridtable" style="width:100%;text-align:center">
+    <tr>
+      <th style="width:12%">课程名</th>
+      <th>学分</th>
+      <th>最高分</th>
+      <th>最低分</th>
+      <th>平均分</th>
+      <th>成绩</th>
+      <th>名次</th>
+    </tr>
+    <literal>
+    <?php $con=count($data['kcm']);?>
+    <?php for($i=0;$i<$con;$i++){?>
+    <tr>
+      <td><?php echo $data['kcm'][$i]?></td>
+      <td><?php echo $data['xf'][$i]?></td>
+      <td><?php echo $data['zgf'][$i]?></td>
+      <td><?php echo $data['zdf'][$i]?></td>
+      <td><?php echo $data['pjf'][$i]?></td>
+      <td><?php echo $data['cj'][$i]?></td>
+      <td><?php echo $data['mc'][$i]?></td>
+    </tr>
+    <?php }?>
+    </literal>
+</table>
+<br><br><br>
+</body>
+<footer>
+    <strong style="color:#00CD00">&copy;HPU小微提供</strong><br>
+</footer>
+</html>
