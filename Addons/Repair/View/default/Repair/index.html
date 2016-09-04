@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+	<title>在线报修</title>
+	<!-- 引入相关css -->
+	<link href="__ROOT__/Addons/Repair/View/default/Public/frozen.css" rel="stylesheet">
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+<style type="text/css" adt="123">
+	footer{background-color:#F5DEB3;color:#666;position: fixed;bottom: 0px;width: 100%;padding: 10px;text-align: center;}
+</style><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+
+<body>
+	
+	<!-- 头部开始 -->
+	<header class="ui-header ui-header-positive ui-border-b" style="background-color: #2D383E;">
+		<h1>小微在线报修平台</h1>
+	</header><!-- 头部结束 -->
+
+	<section class="ui-container ui-center">
+		<div class="ui-form ui-border-t" style="width:100%;">
+			<form action="{:U('repair')}">
+				<div class="ui-form-item ui-border-b">
+					<label style="left:15px;">
+						故障区域
+					</label>
+					<div class="ui-select">
+						<select id="Area_Serial" name="gzqy">
+							<option value="030001">梅园1#学生公寓楼</option>
+							<option value="030002">梅园2#学生公寓楼</option>
+							<option value="030003">梅园3#学生公寓楼</option>
+							<option value="030004">松园1#学生公寓楼</option>
+							<option value="030005">松园2#学生公寓楼</option>
+							<option value="030006">松园3#学生公寓楼</option>
+							<option value="030007">松园4#学生公寓楼</option>
+							<option value="030008">松园5#学生公寓楼</option>
+							<option value="030009">松园6#学生公寓楼</option>
+							<option value="030010">松园7#学生公寓楼</option>
+							<option value="030011">松园8#学生公寓楼</option>
+							<option value="030012">竹园1#学生公寓楼</option>
+							<option value="030013">竹园2#学生公寓楼</option>
+							<option value="030014">竹园3#学生公寓楼</option>
+							<option value="030015">竹园4#学生公寓楼</option>
+							<option value="030016">竹园5#学生公寓楼</option>
+							<option value="030017">竹园6#学生公寓楼</option>
+							<option value="030018">竹园7#学生公寓楼</option>
+							<option value="030019">竹园8#学生公寓楼</option>
+							<option value="030020">兰园1#学生公寓楼</option>
+							<option value="030021">兰园2#学生公寓楼</option>
+							<option value="030022">兰园3#学生公寓楼</option>
+							<option value="030023">兰园4#学生公寓楼</option>
+							<option value="030024">兰园5#学生公寓楼</option>
+							<option value="030025">兰园6#学生公寓楼</option>
+							<option value="030026">2#研究生楼</option>
+						</select>
+					</div>
+				</div>
+				<div class="ui-form-item ui-border-b">
+                    <label style="left:15px;">
+                        详细地址
+                    </label>
+					<input type="text" placeholder="故障的详细地址,如:114室" id="Baddress">
+				</div>
+				<div class="ui-form-item ui-border-b">
+					<label style="left:15px;">
+						维修项目
+					</label>
+					<div class="ui-select">
+						<select id="Project_Serial" name="wxxm">
+							<option value="0404">电风扇类</option>
+							<option value="0406">公共照明类</option>
+							<option value="0405">供电线路类</option>
+							<option value="0403">开关类</option>
+							<option value="0401">室内照明类</option>
+							<option value="0402">卫生间照明类</option>
+							<option value="0505">壁柜</option>
+							<option value="0507">防盗门</option>
+							<option value="0501">家具类</option>
+							<option value="0504">门窗类</option>
+							<option value="0506">上下床铺</option>
+							<option value="0508">卫生间镜子</option>
+							<option value="0509">卫生间晾衣绳</option>
+							<option value="0503">五金门锁配件类</option>
+							<option value="0606">落水管类</option>
+							<option value="0601">墙壁、瓷砖类</option>
+							<option value="0602">屋面渗水类</option>
+							<option value="0607">泥工其他类</option>
+							<option value="0304">阀门类</option>
+							<option value="0302">上水管类</option>
+							<option value="0303">下水管类</option>
+							<option value="0306">下水疏通</option>
+							<option value="0301">水龙头类</option>
+							<option value="0308">卫生间大理石台面</option>
+							<option value="0309">卫生间大理石台面架</option>
+							<option value="0307">卫生间防水</option>
+							<option value="0305">卫生间洁具类</option>
+						</select>
+					</div>
+				</div>
+				<div class="ui-form-item ui-form-item-textarea ui-border-b">
+					<label>
+						故障描述
+					</label>
+					<textarea placeholder="请详尽填写故障描述,字符长度6-500" maxlength="500" id="Bcontent"></textarea>
+				</div>
+				<div class="ui-form-item ui-border-b">
+					<label>
+						联系电话
+					</label>
+					<literal>
+					<input type="text" placeholder="联系电话" value="<?php echo $phone?>" id="Mobile">
+					</literal>
+				</div>
+				<input type="hidden" value="HPU小微" id="BuserName"><!-- 昵称 -->
+				<div class="ui-btn-wrap">
+					<input class="ui-btn-lg ui-btn-primary" type="button" id="submit" value="提 交">
+				</div>
+				<literal>
+				    <input type="hidden" id="openid" value="<?php echo $openid;?>">
+				</literal>
+			</form>
+		</div>
+	</section><!-- 中间内容结束 （登录）-->
+
+	<!-- 底部开始 -->
+	
+
+
+	<!-- 底部结束 -->
+
+	<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+
+	<script type="text/javascript">
+		$("#submit").click(function(){
+			var gzqy = $("select[name=gzqy] option").not(function(){ return !this.selected }); //故障区域
+			var Area_Serial = gzqy.val(); //故障区域序列号
+			var Area_Name = gzqy.text(); //故障区域名称 如：南校区学生公寓兰园5#学生公寓楼
+			// alert(Area_Serial+"//南校区学生公寓"+Area_Name);
+			
+			var Baddress = $("#Baddress").val(); //故障地址
+
+			var wxxm = $("select[name=wxxm] option").not(function(){ return !this.selected }); //维修项目
+			var Project_Serial = wxxm.val(); //维修项目序列号
+			var Project_Name = wxxm.text(); //维修项目名
+
+			var Bcontent = $("#Bcontent").val(); //故障描述
+
+			var Mobile = $("#Mobile").val(); //联系电话
+
+			var BuserName = $("#BuserName").val(); //昵称
+
+			var openid = $("#openid").val(); //昵称
+
+			var InfoID = "";
+			var imglist = "";
+			var Bsource = "1";
+
+			// alert(Mobile+BuserName);
+
+			if (Baddress == '') {
+				alert("故障地址不能为空");
+				return false;
+			}
+
+			if (Bcontent == '') {
+				alert("故障描述不能为空");
+				return false;
+			}
+
+			if (Mobile == '') {
+				alert("联系电话不能为空");
+				return false;
+			}
+
+
+			// 拼接要提交的参数
+			var data = "Area_Serial="+Area_Serial+"&Area_Name=南校区学生公寓"+Area_Name+"&Baddress="+Baddress+"&Project_Serial="+Project_Serial+"&Project_Name="+Project_Name+"&Bcontent="+Bcontent+"&Mobile="+Mobile+"&BuserName="+BuserName+"&InfoID="+InfoID+"&imglist="+imglist+"&Bsource="+Bsource+"&openid="+openid;
+
+			$.ajax({
+				type:"POST",
+				url:"{:U('repair')}",
+				data:data,
+				success: function(data) {
+					$("#submit").attr('disabled','disabled');
+					alert(data);
+				}
+			});
+
+
+
+		});
+
+
+
+	</script>
+
+</body>
+<footer>
+        &copy;HPU小微提供<br>
+    </footer>
+</html>

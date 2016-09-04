@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>解除绑定</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <style>
+        .row{margin: 0px;}
+        #navid{background-color: #B9D3EE;height: 50px;} 
+        #navid span{color: #ffffff;font-size: 18px; line-height: 35px;}
+        #content{margin: 15px 10px 0px 10px;border-top: 1px solid #B9D3EE;}
+        .glyphicon-user, .glyphicon-education, .glyphicon-eye-open{line-height: 32px;font-size: 27px;color: #B9D3EE;}
+        .btn-success{width: 100%;background-color: #B9D3EE;border-color:#B9D3EE; }
+        footer{background-color:#BCD2EE;color:#666;position: fixed;bottom: 0px;width: 100%;padding: 10px;text-align: center;}
+    </style>
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="row" style="height:38px" id="navid">
+        <div class="col-xs-12" style="text-align: center;">
+            <span>解除绑定</span>
+        </div>
+    </div>
+    
+    
+    <!-- 表单 -->
+    <div class="row" style="margin-top: 50px">
+        <div class="panel panel-default" id="content">
+            <div class="panel-body">
+            <span>你确定要解除绑定吗?</span>
+                <form class="form-horizontal" action="{:U('unbind')}" method="post">
+                    <input type="submit" class="btn btn-success" id="buttonId" name="sure" value="确定">
+                    <input type="hidden" class="btn btn-success" id="buttonId" name="openid" value="{$openid}">
+                </form>
+            </div>
+            <!-- 脚注 -->
+                    
+        </div>
+    </div>
+    <div class="col-xs-12 " style="text-align: left;">
+                解除绑定后重新回复绑定就可以绑定其它账号,如果失败请联系客服
+            </div>
+    <div class="col-xs-12 " style="text-align: left;">   <br>         
+        <strong style="color: red">温馨提示：前一段时间转移数据库不小心弄丢了一些数据,导致个别同学解绑和绑定的时候出现空白,如有这种情况请取消关注然后再重新关注即可</strong><br>
+    </div>
+    <footer>
+        &copy;HPU小微提供<br>
+    </footer>
+</body>
+</html>

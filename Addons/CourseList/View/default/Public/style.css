@@ -1,0 +1,130 @@
+*{
+	padding:0px;
+	margin:0px;
+}
+body{
+	background: #FCFCFC;
+}
+ul,li{
+	list-style-type: none;			
+}
+#change_screen_div{
+	position:relative;
+	width: 100%;
+	height:100%;
+	overflow:hidden;
+	margin:auto;
+}
+.tab_title{
+	height: 32px;
+	background: #E0EEE0;
+	font: 0.9em/120% Tahoma,"Hiragino sans gb","Microsoft YaHei",Arial, Helvetica, sans-serif;
+	padding-bottom: 1px;
+}
+.tab_title ul{
+	height:100%;
+}
+.tab_title ul li {
+	height: 26px;
+	float: left;
+	width: 16.5%;
+	line-height: 17px;
+	text-align: center;
+	color: #ffffff;
+	font-weight: bold;
+	padding-top: 4px;
+}
+#tab_title_ul .black{
+	color:#EE00EE;
+}
+#change_screen_ul{
+	width: 500%;
+	height:100%;
+	position: absolute;
+}
+#change_screen_ul .change_screen_ul_li{
+	float:left;
+	display:block;
+	width:20%;
+	height:100%;
+}
+.content_ul li{
+	height:40px;
+	float:left;
+	width:100%;
+	line-height:40px;
+	overflow:hidden;
+	text-indent: 10px;
+	border-top: 1px solid white;
+	border-bottom: 1px solid #F5F5DC;
+	list-style-type: square;
+	list-style-position: inside;
+}
+.content_ul li:first-child {
+	border-top: none;
+}
+.slider_status{
+	margin-top: -8px;
+	width: 83%;
+	height:2px;
+	right:0px;
+	position:absolute;
+}
+#slider_status_span{
+	display: block;
+	width: 48px;
+	height: 100%;
+	background-color: #EC15D0;
+	-webkit-transition: 300ms;
+}
+#month_span{
+	display:block;
+	height: 20px;
+	float: left;
+	width: 15%;
+	line-height: 16px;
+	text-align: center;
+	color: #1B7DDE;
+	font-weight: bold;
+	padding: 4px 2px;	
+}
+table{
+	width: 100%;
+}
+#jieci{
+	width: 14%;
+	padding-left: 8px;
+	border-right: solid 1px #EED2EE;
+	border-bottom: solid 1px #EED2EE;
+	color: #1B7DDE;
+	font-family: Tahoma,"Hiragino sans gb","Microsoft YaHei";
+}
+#content{
+	border-bottom: solid 1px #EED2EE;
+	padding: 0px 0px 8px 8px;
+	font-family: tohoma,"Hiragino sans gb","Microsoft YaHei";
+}
+#kecheng{
+	padding-top: 3px;
+}
+#kecheng p:nth-child(1) {
+	color: #069406;
+	font-size: 0.9em;
+	font-weight: bold;
+	margin: 1px auto;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+#kecheng p:nth-child(2), p:nth-child(3) {
+	font-size: 0.8em;
+	margin: 3px auto;
+}
+#kecheng img {
+	width: 12px;
+	margin-right: 8px;
+}
+tr{
+	height: 30px;
+}
+footer{background-color:#F5DEB3;color:#666;position: fixed;bottom: 0px;width: 100%;padding: 10px;text-align: center;}

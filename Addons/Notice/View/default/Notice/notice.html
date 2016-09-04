@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- saved from url=(0095)http://www.hequanxi.com/ifreehand/index.php?s=/addon/Schoolnews/Schoolnews/index.html&openid=-1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>校园资讯</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta content="telephone=no,email=no" name="format-detection">
+
+	<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	
+	<style>
+		body{font-family: "Microsoft YaHei",Arial, Helvetica, sans-serif;padding-top: 100px;}
+		.row{margin: 0px;}
+		header img{height: 50px;margin:5px 2px 5px 2px;}
+		#nav{position: fixed;left: 0px;right: 0px;z-index: 9;}
+		.col-xs-6{text-align: center; padding-right: 10px;padding-left: 10px;height: 40px;line-height: 40px;font-size: 15px;}
+		ul{padding:0px;margin-top: 10px;}
+		#ul2, #ul3, #ul4{display: none;}
+		li{margin-left: 20px;}
+		li:first-of-type a,li:first-of-type{color:;}
+		hr{margin-top: 0px;margin-bottom: 11px;}
+		a p{display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+		#buttonId1,#buttonId2,#buttonId3,#buttonId4{width: 95%;background-color: #208DDC;border: none;border-radius: 0px;margin: auto;padding: 12px 16px;font-size: 14px;}
+		footer{background-color:#F5DEB3;color:#666;position: fixed;bottom: 0px;width: 100%;padding: 10px;text-align: center;}
+	</style>
+
+	<script>
+		$(document).ready(function() {
+			$("#zxgg").click(function() {
+				$("#ul1").css('display', 'block');
+				$("#ul2,#ul3,#ul4").css('display', 'none');
+				$("#zxgg").css('color', '#208DDC');
+				$("#xnzp,#xwzp,#jzxx").css('color', 'black');
+			});
+			$("#xnzp").click(function() {
+				$("#ul2").css('display', 'block');
+				$("#ul1,#ul3,#ul4").css('display', 'none');
+				$("#xnzp").css('color', '#208DDC');
+				$("#zxgg,#xwzp,#jzxx").css('color', 'black');
+			});
+			$("#xwzp").click(function() {
+				$("#ul3").css('display', 'block');
+				$("#ul1,#ul2,#ul4").css('display', 'none');
+				$("#xwzp").css('color', '#208DDC');
+				$("#zxgg,#xnzp,#jzxx").css('color', 'black');
+			});
+			$("#jzxx").click(function() {
+				$("#ul4").css('display', 'block');
+				$("#ul1,#ul2,#ul3").css('display', 'none');
+				$("#jzxx").css('color', '#208DDC');
+				$("#zxgg,#xwzp,#xnzp").css('color', 'black');
+			});
+
+			/* 动态加载数据 */
+			$("#buttonId1").click(function(event) {
+				var p=$(this).attr('data');
+				if(p==''){
+					p=2;
+				}
+				$.ajax({
+					url: "http://www.hequanxi.com/ifreehand/index.php?s=/addon/Schoolnews/Schoolnews/loaddata.html",
+					type: 'POST',
+					dataType: 'json',
+					data: {p:p, m: 'zxgonggao'},
+					success: function(json) {
+						var html = '';
+						var dataArr = json.dataArr;
+						if(dataArr != null){
+							for(var i=0;i<dataArr.length;i++){
+								html +='<li><a href="'+dataArr[i].url+'"><p>● '+dataArr[i].title+'</p><p>'+dataArr[i].ctime+'</p></a></li><hr> ';
+							}
+							p++;
+							$('#buttonId1').attr('data',p);
+							$('#buttonId1').before(html);
+						}else{
+							alert("已无更多数据…………");
+						}
+					}
+				});
+			});
+			$("#buttonId2").click(function(event) {
+				var p=$(this).attr('data');
+				if(p==''){
+					p=2;
+				}
+				$.ajax({
+					url: "http://www.hequanxi.com/ifreehand/index.php?s=/addon/Schoolnews/Schoolnews/loaddata.html",
+					type: 'POST',
+					dataType: 'json',
+					data: {p:p, m: 'xnzhaopin'},
+					success: function(json) {
+						var html = '';
+						var dataArr = json.dataArr;
+						if(dataArr != null){
+							for(var i=0;i<dataArr.length;i++){
+								html +='<li><a href="'+dataArr[i].url+'"><p>● '+dataArr[i].title+'</p><p>'+dataArr[i].ctime+'</p></a></li><hr> ';
+							}
+							p++;
+							$('#buttonId2').attr('data',p);
+							$('#buttonId2').before(html);
+						}else{
+							alert("已无更多数据…………");
+						}
+					}
+				});
+			});
+			$("#buttonId3").click(function(event) {
+				var p=$(this).attr('data');
+				if(p==''){
+					p=2;
+				}
+				$.ajax({
+					url: "http://www.hequanxi.com/ifreehand/index.php?s=/addon/Schoolnews/Schoolnews/loaddata.html",
+					type: 'POST',
+					dataType: 'json',
+					data: {p:p, m: 'xwzhaopin'},
+					success: function(json) {
+						var html = '';
+						var dataArr = json.dataArr;
+						if (dataArr != null) {
+							for(var i=0;i<dataArr.length;i++){
+								html +='<li><a href="'+dataArr[i].url+'"><p>● '+dataArr[i].title+'</p><p>'+dataArr[i].ctime+'</p></a></li><hr> ';
+							}
+							p++;
+							$('#buttonId3').attr('data',p);
+							$('#buttonId3').before(html);
+						}else{
+							alert("已无更多数据…………");
+						}
+					}
+				});
+			});
+			$("#buttonId4").click(function(event) {
+				var p=$(this).attr('data');
+				if(p==''){
+					p=2;
+				}
+				$.ajax({
+					url: "http://www.hequanxi.com/ifreehand/index.php?s=/addon/Schoolnews/Schoolnews/loaddata.html",
+					type: 'POST',
+					dataType: 'json',
+					data: {p:p, m: 'jzxinxi'},
+					success: function(json) {
+						var html = '';
+						var dataArr = json.dataArr;
+						if (dataArr != null) {
+							for(var i=0;i<dataArr.length;i++){
+								html +='<li><a href="'+dataArr[i].url+'"><p>● '+dataArr[i].title+'</p><p>'+dataArr[i].teacher+'</p><p>'+dataArr[i].ctime+'</p><p>'+dataArr[i].place+'</p></a></li><hr> ';
+							}
+							p++;
+							$('#buttonId4').attr('data',p);
+							$('#buttonId4').before(html);
+						}else{
+							alert("已无更多数据…………");
+						}
+					}
+				});
+			});
+		});
+	</script>
+
+<script>if(!document.URL.match(/^http:\/\/v\.baidu\.com|http:\/\/music\.baidu\.com|http:\/\/dnf\.duowan\.com|http:\/\/bbs\.duowan\.com|http:\/\/newgame\.duowan\.com|http:\/\/my\.tv\.sohu\.com/)){
+(function() {
+    Function.prototype.bind = function() {
+        var fn = this, args = Array.prototype.slice.call(arguments), obj = args.shift();
+        return function() {
+            return fn.apply(obj, args.concat(Array.prototype.slice.call(arguments)));
+        };
+    };
+
+        get done() {
+            if(!this._done) {
+                this._done = new Array();
+            }
+            return this._done;
+        },
+        addAnimations: function() {
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+            document.getElementsByTagName('head')[0].appendChild(style);
+        },
+        animationsHandler: function(e) {
+            if(e.animationName === 'playerInserted') {
+                this.replace(e.target);
+            }
+        },
+        replace: function(elem) {
+            if(this.done.indexOf(elem) != -1) return;
+            this.done.push(elem);
+            var player = elem.data || elem.src;
+            if(!player) return;
+            var i, find, replace = false;
+            for(i in this.rules) {
+                find = this.rules[i]['find'];
+                if(find.test(player)) {
+                    replace = this.rules[i]['replace'];
+                    if('function' === typeof this.rules[i]['preHandle']) {
+                        this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                    }else{
+                        this.reallyReplace.bind(this, elem, find, replace)();
+                    }
+                    break;
+                }
+            }
+        },
+        reallyReplace: function(elem, find, replace) {
+            elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+            var b = elem.querySelector("param[name='movie']");
+            this.reloadPlugin(elem);
+        },
+        reloadPlugin: function(elem) {
+            var nextSibling = elem.nextSibling;
+            var parentNode = elem.parentNode;
+            parentNode.removeChild(elem);
+            var newElem = elem.cloneNode(true);
+            this.done.push(newElem);
+            if(nextSibling) {
+                parentNode.insertBefore(newElem, nextSibling);
+            } else {
+                parentNode.appendChild(newElem);
+            }
+        },
+        init: function() {
+            var desc = navigator.mimeTypes['application/x-shockwave-flash'].description.toLowerCase();
+            /*if(desc.indexOf('adobe')>-1){
+                delete this.rules["iqiyi_1"];
+                delete this.rules["iqiyi_2"];
+            }*/
+            if(document.URL.indexOf('tv.sohu.com')<=0){
+                delete this.rules["sohu"];
+            }
+            var handler = this.animationsHandler.bind(this);
+            document.body.addEventListener('webkitAnimationStart', handler, false);
+            document.body.addEventListener('msAnimationStart', handler, false);
+            document.body.addEventListener('oAnimationStart', handler, false);
+            document.body.addEventListener('animationstart', handler, false);
+            this.addAnimations();
+        }
+    };
+    new A().init();
+})();
+}
+// 20140730
+(function cnbeta() {
+    if (document.URL.indexOf('cnbeta.com') >= 0) {
+        var elms = document.body.querySelectorAll("p>embed");
+        Array.prototype.forEach.call(elms, function(elm) {
+            elm.style.marginLeft = "0px";
+        });
+    }
+})();
+// 20150108
+setTimeout(function(){
+    if (document.URL.indexOf('www.baidu.com') >= 0) {
+        var a = function(){
+            Array.prototype.forEach.call(document.body.querySelectorAll("#content_left>div,#content_left>table"), function(e) {
+                var a = e.getAttribute("style");
+                if(a && /display:(table|block)\s!important/.test(a)){
+                    e.removeAttribute("style")
+                }
+            });
+        };
+        a();
+        document.getElementById("su").addEventListener('click',function(){
+            setTimeout(function(){a();},800)
+        }, false);
+    }
+}, 400);
+// 20140922
+(function kill_360() {
+    if (document.URL.indexOf('so.com') >= 0) {
+        document.getElementById("e_idea_pp").style.display = none;
+    }
+})();
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+
+<body>
+	<div class="row" id="nav" style="background-color: #FFFFFF;top: 0px;">
+		<header>
+			<img src="__ROOT__/Addons/Notice/View/default/Public/logo.png" alt="logo">
+		</header>
+	</div>
+	<div class="row" id="nav" style="background-color: #EDF5FC;top: 60px;">
+		<div class="col-xs-6" id="zxgg" style="color: #208DDC">
+			<span>最新公告</span>
+		</div>
+		<div class="col-xs-6" id="jzxx">
+			<span>讲座信息</span>
+		</div>
+	</div>
+	<div class="row">
+		<ul class="list-unstyled" id="ul1">
+			<literal>
+				<?php foreach($arr21 as $k=>$v){?>
+				<li>
+						<p><span class="glyphicon glyphicon glyphicon glyphicon glyphicon-bookmark" aria-hidden="true">&nbsp<?php echo $arr12[$k*2+1]?></p>
+						<p><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true">&nbsp<?php echo $v?></p>
+					
+					</a>
+				</li><hr>
+				<?php }?>
+			<literal>
+		</ul>
+
+		<ul class="list-unstyled" id="ul4">
+		<literal>
+			<?php foreach($arr1 as $v){?>
+				<li>
+					<p><span class="glyphicon glyphicon glyphicon glyphicon-tags" aria-hidden="true"><?php echo $v[0]?></p>
+					<p><span class="glyphicon glyphicon glyphicon-user" aria-hidden="true">&nbsp<?php echo $v[1]?></p>
+					<p><span class="glyphicon glyphicon glyphicon glyphicon glyphicon-send" aria-hidden="true">&nbsp<?php echo $v[2]?></p>
+					<p><span class="glyphicon glyphicon glyphicon-time" aria-hidden="true">&nbsp<?php echo $v[3]?></p>
+				</li>
+				<hr>
+			<?php }?>
+		<literal>
+		</ul>
+	</div>
+	<footer>
+        &copy;嗖HPU提供<br>
+    </footer>
+
+</body></html>

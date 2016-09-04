@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<!-- saved from url=(0151)http://115.28.205.182/ifreehand/index.php?s=/addon/Studentsyllabus/Studentsyllabus/index/token/gh_63827b9730bd/openid/osvGYs_EC4tEsnk_LE284u2WZ0TA.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>本学期课表</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <link href="__ROOT__/Addons/CourseList/View/default/Public/style.css" rel="stylesheet" type="text/css">
+
+<style type="text/css" adt="123"></style><script>if(!document.URL.match(/^http:\/\/v\.baidu\.com|http:\/\/music\.baidu\.com|http:\/\/dnf\.duowan\.com|http:\/\/bbs\.duowan\.com|http:\/\/newgame\.duowan\.com|http:\/\/my\.tv\.sohu\.com/)){
+(function() {
+    Function.prototype.bind = function() {
+        var fn = this, args = Array.prototype.slice.call(arguments), obj = args.shift();
+        return function() {
+            return fn.apply(obj, args.concat(Array.prototype.slice.call(arguments)));
+        };
+    };
+    function A() {}
+    A.prototype = {
+        rules: {
+            /*'youku_loader': {
+                'find': /^http:\/\/static\.youku\.com\/.*(loader|player_.*)(_taobao)?\.swf/,
+                'replace': 'http://swf.adtchrome.com/loader.swf'
+            },
+            'youku_out': {
+                'find': /^http:\/\/player\.youku\.com\/player\.php\/.*sid\/(.*)/,
+                'replace': 'http://swf.adtchrome.com/loader.swf?VideoIDS=$1'
+            },*/
+            'pps_pps': {
+                'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/pps_flvplay_s\.swf/,
+                'replace': 'http://swf.adtchrome.com/pps_20140420.swf'
+            },
+            /*'iqiyi_1': {
+                'find': /^http:\/\/www\.iqiyi\.com\/player\/cupid\/common\/.+\.swf$/,
+                'replace': 'http://swf.adtchrome.com/iqiyi_20140624.swf'
+            },
+            'iqiyi_2': {
+                'find': /^http:\/\/www\.iqiyi\.com\/common\/flashplayer\/\d+\/.+\.swf$/,
+                'replace': 'http://swf.adtchrome.com/iqiyi_20140624.swf'
+            },*/
+            'ku6': {
+                'find': /^http:\/\/player\.ku6cdn\.com\/default\/.*\/\d+\/(v|player|loader)\.swf/,
+                'replace': 'http://swf.adtchrome.com/ku6_20140420.swf'
+            },
+            'ku6_topic': {
+                'find': /^http:\/\/player\.ku6\.com\/inside\/(.*)\/v\.swf/,
+                'replace': 'http://swf.adtchrome.com/ku6_20140420.swf?vid=$1'
+            },
+            'sohu': {
+                'find': /^http:\/\/tv\.sohu\.com\/upload\/swf(\/p2p)?\/\d+\/Main\.swf/,
+                'replace': 'http://www.adtchrome.com/sohu/sohu_20150104.swf'
+            },
+            'sohu2':{
+                'find':/^http:\/\/[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\/testplayer\/Main0?\.swf/,
+                'replace':'http://www.adtchrome.com/sohu/sohu_20150104.swf'
+            },
+            'sohu_share': {
+                'find': /^http:\/\/share\.vrs\.sohu\.com\/my\/v\.swf&/,
+                'replace': 'http://www.adtchrome.com/sohu/sohu_20150104.swf?'
+            },
+            'sohu_sogou' : {
+                'find': /^http:\/\/share\.vrs\.sohu\.com\/(\d+)\/v\.swf/,
+                'replace': 'http://www.adtchrome.com/sohu/sohu_20150104.swf?vid=$1'
+            },
+            /*'letv': {
+                'find': /^http:\/\/player\.letvcdn\.com\/.*p\/.*\/newplayer\/LetvPlayer\.swf/,
+                'replace': 'http://swf.adtchrome.com/20150110_letv.swf'
+            },
+            'letv_topic': {
+                'find': /^http:\/\/player\.hz\.letv\.com\/hzplayer\.swf\/v_list=zhuanti/,
+                'replace': 'http://swf.adtchrome.com/20150110_letv.swf'
+            },
+            'letv_duowan': {
+                'find': /^http:\/\/assets\.dwstatic\.com\/video\/vpp\.swf/,
+                'replace': 'http://yuntv.letv.com/bcloud.swf'
+            },*/
+            '17173_in':{
+                'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+            },
+            '17173_out':{
+                'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+            },
+            '17173_live':{
+                'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+            },
+            '17173_live_out':{
+                'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+            }
+        },
+        _done: null,
+        get done() {
+            if(!this._done) {
+                this._done = new Array();
+            }
+            return this._done;
+        },
+        addAnimations: function() {
+            var style = document.createElement('style');
+            style.type = 'text/css';
+            style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+            document.getElementsByTagName('head')[0].appendChild(style);
+        },
+        animationsHandler: function(e) {
+            if(e.animationName === 'playerInserted') {
+                this.replace(e.target);
+            }
+        },
+        replace: function(elem) {
+            if(this.done.indexOf(elem) != -1) return;
+            this.done.push(elem);
+            var player = elem.data || elem.src;
+            if(!player) return;
+            var i, find, replace = false;
+            for(i in this.rules) {
+                find = this.rules[i]['find'];
+                if(find.test(player)) {
+                    replace = this.rules[i]['replace'];
+                    if('function' === typeof this.rules[i]['preHandle']) {
+                        this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                    }else{
+                        this.reallyReplace.bind(this, elem, find, replace)();
+                    }
+                    break;
+                }
+            }
+        },
+        reallyReplace: function(elem, find, replace) {
+            elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+            var b = elem.querySelector("param[name='movie']");
+            this.reloadPlugin(elem);
+        },
+        reloadPlugin: function(elem) {
+            var nextSibling = elem.nextSibling;
+            var parentNode = elem.parentNode;
+            parentNode.removeChild(elem);
+            var newElem = elem.cloneNode(true);
+            this.done.push(newElem);
+            if(nextSibling) {
+                parentNode.insertBefore(newElem, nextSibling);
+            } else {
+                parentNode.appendChild(newElem);
+            }
+        },
+        init: function() {
+            var desc = navigator.mimeTypes['application/x-shockwave-flash'].description.toLowerCase();
+            /*if(desc.indexOf('adobe')>-1){
+                delete this.rules["iqiyi_1"];
+                delete this.rules["iqiyi_2"];
+            }*/
+            if(document.URL.indexOf('tv.sohu.com')<=0){
+                delete this.rules["sohu"];
+            }
+            var handler = this.animationsHandler.bind(this);
+            document.body.addEventListener('webkitAnimationStart', handler, false);
+            document.body.addEventListener('msAnimationStart', handler, false);
+            document.body.addEventListener('oAnimationStart', handler, false);
+            document.body.addEventListener('animationstart', handler, false);
+            this.addAnimations();
+        }
+    };
+    new A().init();
+})();
+}
+// 20140730
+(function cnbeta() {
+    if (document.URL.indexOf('cnbeta.com') >= 0) {
+        var elms = document.body.querySelectorAll("p>embed");
+        Array.prototype.forEach.call(elms, function(elm) {
+            elm.style.marginLeft = "0px";
+        });
+    }
+})();
+// 20150108
+setTimeout(function(){
+    if (document.URL.indexOf('www.baidu.com') >= 0) {
+        var a = function(){
+            Array.prototype.forEach.call(document.body.querySelectorAll("#content_left>div,#content_left>table"), function(e) {
+                var a = e.getAttribute("style");
+                if(a && /display:(table|block)\s!important/.test(a)){
+                    e.removeAttribute("style")
+                }
+            });
+        };
+        a();
+        document.getElementById("su").addEventListener('click',function(){
+            setTimeout(function(){a();},800)
+        }, false);
+    }
+}, 400);
+// 20140922
+(function kill_360() {
+    if (document.URL.indexOf('so.com') >= 0) {
+        document.getElementById("e_idea_pp").style.display = none;
+    }
+})();
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+<style>
+    a{
+        text-decoration: none;
+    }
+    a:hover{text-decoration:underline;}
+</style>
+<literal>
+<body>
+    <div id="tbody" style="height: 592px;">
+        <div id="change_screen_div">
+            <div class="tab_title">
+                <span style="margin-top: 5px;" id="month_span">第四周</span>
+                <ul id="tab_title_ul">
+                    <li style="margin-top: 4px;" class="black">周一</li>
+                    <li style="margin-top: 4px;" class="">周二</li>
+                    <li style="margin-top: 4px;" class="">周三</li>
+                    <li style="margin-top: 4px;" class="">周四</li>
+                    <li style="margin-top: 4px;" class="">周五</li>
+                </ul>
+                <div class="slider_status">
+                    <span id="slider_status_span" style="transform: translateX(227.667px) translateZ(0px);"></span>
+                </div>
+            </div>
+            <ul id="change_screen_ul" style="transform: translate3d(-1366px, 0px, 0px); transition-duration: 300ms;">
+                <!-- 循环星期课表信息 -->
+                <?php for($i=1;$i<=5;$i++){?>
+                <li class="change_screen_ul_li">
+                        <table>
+                            <!-- 循环节次课表信息 -->
+                            <tbody><tr>
+                                    <td id="jieci">
+                                        1-2                                 </td>
+                                    <td id="content">
+                                        <!-- 循环节次重课信息 -->
+                                        <?php 
+                                            if(!empty($day[$i][1])){
+                                                $con=count($day[$i][1]["score"]);
+                                                for($k=0;$k<$con;$k++){
+                                        ?>
+                                        <div id="kecheng">
+                                                <p>
+                                                    <?php echo $day[$i][1]["score"][$k]?>
+                                                </p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/map.png" alt="地址"><?php echo $day[$i][1]["add"][$k]?></p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/clock.png" alt="时间"><?php echo $day[$i][1]["teacher"][$k]?></p>
+                                            </div> 
+                                        <?php }}?>                                </td>
+                                </tr><tr>
+                                    <td id="jieci">
+                                        3-4                                 </td>
+                                    <td id="content">
+                                        <!-- 循环节次重课信息 -->
+                                        <?php 
+                                            if(!empty($day[$i][3])){
+                                                $con=count($day[$i][3]["score"]);
+                                                for($k=0;$k<$con;$k++){
+                                        ?>
+                                        <div id="kecheng">
+                                                <p>
+                                                    <?php echo $day[$i][3]["score"][$k]?>
+                                                </p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/map.png" alt="地址"><?php echo $day[$i][3]["add"][$k]?></p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/clock.png" alt="时间"><?php echo $day[$i][3]["teacher"][$k]?></p>
+                                            </div> 
+                                        <?php }}?>                                </td>
+                                </tr><tr>
+                                    <td id="jieci">
+                                        5-6                                 </td>
+                                    <td id="content">
+                                        <!-- 循环节次重课信息 -->
+                                        <?php 
+                                            if(!empty($day[$i][5])){
+                                                $con=count($day[$i][5]["score"]);
+                                                for($k=0;$k<$con;$k++){
+                                        ?>
+                                        <div id="kecheng">
+                                                <p>
+                                                    <?php echo $day[$i][5]["score"][$k]?>
+                                                </p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/map.png" alt="地址"><?php echo $day[$i][5]["add"][$k]?></p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/clock.png" alt="时间"><?php echo $day[$i][5]["teacher"][$k]?></p>
+                                            </div> 
+                                        <?php }}?>                                </td>
+                                </tr><tr>
+                                    <td id="jieci">
+                                        7-8                                 </td>
+                                    <td id="content">
+                                        <!-- 循环节次重课信息 -->
+                                        <?php 
+                                            if(isset($day[$i][7])){
+                                                $con=count($day[$i][7]["score"]);
+                                                for($k=0;$k<$con;$k++){
+                                        ?>
+                                        <div id="kecheng">
+                                                <p>
+                                                    <?php echo $day[$i][7]["score"][$k]?>
+                                                </p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/map.png" alt="地址"><?php echo $day[$i][7]["add"][$k]?></p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/clock.png" alt="时间"><?php echo $day[$i][7]["teacher"][$k]?></p>
+                                            </div> 
+                                        <?php }}?>                                </td>
+                                </tr><tr>
+                                    <td id="jieci">
+                                        9-10                                    </td>
+                                    <td id="content">
+                                        <!-- 循环节次重课信息 -->
+                                        <?php 
+                                            if(isset($day[$i][9])){
+                                                $con=count($day[$i][9]["score"]);
+                                                for($k=0;$k<$con;$k++){
+                                        ?>
+                                        <div id="kecheng">
+                                                <p>
+                                                    <?php echo $day[$i][9]["score"][$k]?>
+                                                </p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/map.png" alt="地址"><?php echo $day[$i][9]["add"][$k]?></p>
+                                                <p><img src="__ROOT__/Addons/CourseList/View/default/Public/clock.png" alt="时间"><?php echo $day[$i][9]["teacher"][$k]?></p>
+                                            </div> 
+                                        <?php }}?>                                </td>
+                                </tr> 
+                                <?php foreach($day as $v=>$k){if($v==date('w')){?>                
+                <tr>
+                
+                                                 </td>
+            </tr><?php }}?>  </literal>                </tbody></table> <div class="alert alert-warning"><a class="btn btn-info" href="{:U('ycourse')}">ヾ(o◕∀◕)ﾉヾ周末也有课吗?点这儿查看教务处课表</a></div>
+                    </li><literal>   <?php }?> </literal>         </ul>
+        </div>
+
+        
+    
+    <script src="__ROOT__/Addons/CourseList/View/default/Public/ai.js" type="text/javascript"></script>
+    <script src="__ROOT__/Addons/CourseList/View/default/Public/slip.js" type="text/javascript"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            /* 取得元素在同辈中的索引值 */
+            function index(obj, current){
+                for (var i = 0, length = current.length; i<length; i++) { 
+                    if (current[i] == obj ) { 
+                        return i; 
+                    } 
+                } 
+            }
+            ai.hideUrl();
+            var change_screen_ul = ai.i("change_screen_ul"),
+            slip_status_span = ai.i("slider_status_span"),
+            tbody = ai.i("tbody"),
+            minus = ai.ovb.ios() && ai.ovb.safari() ? 60 : 0;
+            tbody.style.height =  ai.wh() - 40 + minus+"px";
+
+            function changeScreenEndFun() {
+                var kuan = ai.ww();
+                slip_status_span.style['webkitTransform'] = 'translateX('+this.page * kuan/6+'px) translateZ(0)';
+                ai.q('#tab_title_ul > li.black').className = '';
+                ai.q('#tab_title_ul > li:nth-child(' + (this.page+1) + ')').className = 'black';
+            }
+            var slipjs = slip('page',change_screen_ul,{
+                num: 5,
+                endFun: changeScreenEndFun
+            });
+            /* 初始化执行，跳到当前星期的课表信息 */
+            var date = new Date();
+            var week = date.getDay();
+            if (week != 6 && week != 0) {
+                slipjs.toPage(week-1, 10);
+            }
+    // 点击便签滑动到指定位置
+    var ul = ai.q('#tab_title_ul');
+    var li = ai.a('#tab_title_ul > li');
+    ai.touchClick(ul,function(e){
+        if(ul.webkitMatchesSelector.call( e.target, 'ul li') ) {
+            var that = e.target;
+            var num = index(that, li);
+            slipjs.toPage(num, 300);
+        }
+    });
+}, false);
+</script>
+</div></body>
+
+<footer>
+        &copy;HPU小微提供<br>
+    </footer>
+</html>
