@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>历年成绩查询</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    //禁止显示连接
+    function onBridgeReady(){
+     WeixinJSBridge.call('hideOptionMenu');
+    }
+
+    if (typeof WeixinJSBridge == "undefined"){
+        if( document.addEventListener ){
+            document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+        }else if (document.attachEvent){
+            document.attachEvent('WeixinJSBridgeReady', onBridgeReady); 
+            document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+        }
+    }else{
+        onBridgeReady();
+    }
+</script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+    <style>
+    .col-md-12{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    #t2{
+        display: none;
+    }
+    footer{background-color:#00EEEE;color:#666;position: fixed;bottom: 0px;width: 100%;padding: 10px;text-align: center;}
+  </style>
+  <body>
+        <div class="alert alert-info" role="alert">
+        <font color="#6CA6CD">【温馨提示】<br>历年成绩每周更新一次,如果绑定了其它账号将在上次查询一周后更新,初次绑定账号请谨慎</font><br>
+        </div>
+        <div id="t1" class="col-md-12">
+        <literal>
+        <table class="table table-striped table-bordered table-hover">
+            <tr>
+                <th class="text-center">学期</th>
+                <th class="text-center">科目</th>
+                <th class="text-center">学分</th>
+                <th class="text-center">成绩</th>
+            </tr> 
+            <?php for($i=1;$i<$con;$i++){?>
+            <tr>
+              <td class="text-center"><?php echo trim($arr[$i][1])?></td>
+              <td class="text-center"><?php echo trim($arr[$i][3])?></td>
+              <td class="text-center"><?php echo trim($arr[$i][4])?></td>
+              <td class="text-center"><?php echo trim($arr[$i][6])?></td>
+            </tr>
+            <?php }?>
+        </table>
+        </literal>
+        </div>
+        <br><br>
+    
+  </body>
+  <footer style="text-align: center;">
+    &copy;HPU小微提供<br>
+</footer>
+</html>
