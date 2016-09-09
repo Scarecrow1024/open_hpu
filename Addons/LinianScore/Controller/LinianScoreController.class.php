@@ -146,10 +146,10 @@ class LinianScoreController extends AddonsController{
             $openid=$_POST['openid'];
             $zjh=$_POST['zjh'];
             $mm=$_POST['mm'];
-            //$v_yzm=$_POST['v_yzm'];
+            $v_yzm=$_POST['v_yzm'];
         }
 
-        $ch=curl_init();
+        /*$ch=curl_init();
         $openid=get_openid();
         if($openid=='-1'){
             $img_id='default'; 
@@ -171,12 +171,12 @@ class LinianScoreController extends AddonsController{
         $content1=curl_exec($ch);
         curl_close ($ch);
         preg_match("/<result>(.*?)<\/result>/si", $content1,$str1);
-        $verify=$str1[1];
+        $verify=$str1[1];*/
 
         $params = array (
             'zjh' => $zjh,
             'mm' => $mm,
-            'v_yzm' => $verify 
+            'v_yzm' => $v_yzm
             );  
 
 
