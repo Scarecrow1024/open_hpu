@@ -156,7 +156,7 @@ class LinianScoreController extends AddonsController{
         }else{
             $img_id=$openid;
         }
-        $post="url=https://blog.niool.com/weixin/Verify/".$img_id.".jpg&service=OcrKingForCaptcha&language=eng&charset=7&apiKey=7a035b90a8142c343eq9CThVaZK2nbB9kYb1LrOeCxqtH0wl7upz8Hk8pii90sXv6e1kd6qHQ9&type=http://niool.com/weixin/Verify/".$img_id.".jpg";  
+        $post="url=https://blog.niool.com/weixin/Verify/".$img_id.".jpg&service=OcrKingForCaptcha&language=eng&charset=7&apiKey=7a035b90a8142c343eq9CThVaZK2nbB9kYb1LrOeCxqtH0wl7upz8Hk8pii90sXv6e1kd6qHQ9&type=https://blog.niool.com/weixin/Verify/".$img_id.".jpg";
         curl_setopt($ch,CURLOPT_URL,"http://lab.ocrking.com/ok.html");
         //curl_setopt($ch,CURLOPT_REFERER,"http://lab.ocrking.com/");
         curl_setopt($ch, CURLOPT_HEADER, 0);
