@@ -1,6 +1,6 @@
 <?php
 
-namespace Addons\SchoolCard\Model;
+namespace Addons\SchoolCardLogin\Model;
 use Think\Model;
 
 /**

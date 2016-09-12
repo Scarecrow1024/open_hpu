@@ -1,6 +1,6 @@
 <?php
 
-namespace Addons\SchoolCard;
+namespace Addons\SchoolCardLogin;
 use Common\Controller\Addon;
 
 /**

@@ -61,17 +61,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SchoolCardLoginController.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SchoolCardLoginController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SchoolCardLogin/Controller/SchoolCardLoginController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WeixinAddonModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SchoolCardLogin/Model/WeixinAddonModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-731">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SchoolCardLoginModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SchoolCardLogin/Model/SchoolCardLoginModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SchoolCardLoginAddon.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SchoolCardLogin/SchoolCardLoginAddon.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SchoolCardLogin/View/default/SchoolCardLogin/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="833">
@@ -110,8 +140,10 @@
         <option value="$PROJECT_DIR$/SchoolCard-Login/Controller/SchoolCard-LoginController.class.php" />
         <option value="$PROJECT_DIR$/SchoolCard-Login/Controller/SchoolCardLoginController.class.php" />
         <option value="$PROJECT_DIR$/SchoolCard-Login/View/default/SchoolCardLogin/login.html" />
-        <option value="$PROJECT_DIR$/SchoolCardLogin/Controller/SchoolCardLoginController.class.php" />
         <option value="$PROJECT_DIR$/SchoolCardLogin/View/default/SchoolCardLogin/login.html" />
+        <option value="$PROJECT_DIR$/SchoolCardLogin/SchoolCardLoginAddon.class.php" />
+        <option value="$PROJECT_DIR$/SchoolCardLogin/Model/SchoolCardLoginModel.class.php" />
+        <option value="$PROJECT_DIR$/SchoolCardLogin/Controller/SchoolCardLoginController.class.php" />
       </list>
     </option>
   </component>
@@ -209,6 +241,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SchoolCardLogin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Addons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Addons" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolCardLogin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Model" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,12 +433,12 @@
       <updated>1473402032144</updated>
       <workItem from="1473402033292" duration="1669000" />
       <workItem from="1473406752853" duration="1795000" />
-      <workItem from="1473663880478" duration="2080000" />
+      <workItem from="1473663880478" duration="2354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5544000" />
+    <option name="totallyTimeSpent" value="5818000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -726,18 +776,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SchoolCardLogin/Controller/SchoolCardLoginController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SchoolCardLogin/View/default/SchoolCardLogin/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="91" column="104" selection-start-line="91" selection-start-column="104" selection-end-line="91" selection-end-column="104" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolCardLogin/SchoolCardLoginAddon.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolCardLogin/Model/WeixinAddonModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-731">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolCardLogin/Model/SchoolCardLoginModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolCardLogin/Controller/SchoolCardLoginController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding />
         </state>
       </provider>

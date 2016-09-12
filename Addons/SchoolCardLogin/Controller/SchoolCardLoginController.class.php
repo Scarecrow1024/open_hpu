@@ -1,6 +1,6 @@
 <?php
 
-namespace Addons\SchooleCardLogin\Controller;
+namespace Addons\SchoolCardLogin\Controller;
 use Home\Controller\AddonsController;
 
 class SchoolCardLoginController extends AddonsController{
