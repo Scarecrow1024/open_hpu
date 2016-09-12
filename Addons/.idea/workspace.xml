@@ -31,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LibLoginController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LibLoginController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LibLogin/Controller/LibLoginController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
@@ -41,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LibLogin/View/default/LibLogin/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="766">
-              <caret line="85" column="53" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
+            <state relative-caret-position="425">
+              <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -157,8 +157,8 @@
         <option value="$PROJECT_DIR$/LibLogin/Model/LibLoginModel.class.php" />
         <option value="$PROJECT_DIR$/LibLogin/Model/WeixinAddonModel.class.php" />
         <option value="$PROJECT_DIR$/LibLogin/LibLoginAddon.class.php" />
-        <option value="$PROJECT_DIR$/LibLogin/View/default/LibLogin/login.html" />
         <option value="$PROJECT_DIR$/LibLogin/Controller/LibLoginController.class.php" />
+        <option value="$PROJECT_DIR$/LibLogin/View/default/LibLogin/login.html" />
       </list>
     </option>
   </component>
@@ -474,12 +474,12 @@
       <updated>1473402032144</updated>
       <workItem from="1473402033292" duration="1669000" />
       <workItem from="1473406752853" duration="1795000" />
-      <workItem from="1473663880478" duration="5092000" />
+      <workItem from="1473663880478" duration="5203000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8556000" />
+    <option name="totallyTimeSpent" value="8667000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -888,14 +888,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LibLogin/View/default/LibLogin/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="766">
-          <caret line="85" column="53" selection-start-line="85" selection-start-column="53" selection-end-line="85" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LibLogin/Controller/SimpleHtmlController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -934,6 +926,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="189" column="9" selection-start-line="189" selection-start-column="9" selection-end-line="189" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LibLogin/View/default/LibLogin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
           <folding />
         </state>
       </provider>
