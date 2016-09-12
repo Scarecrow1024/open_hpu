@@ -41,11 +41,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LibLogin/View/default/LibLogin/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="425">
               <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SchoolCardLogin/View/default/SchoolCardLogin/login.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -103,18 +113,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleHtmlController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RepairLogin/Controller/SimpleHtmlController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="834">
-              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
-              <caret line="34" column="73" selection-start-line="34" selection-start-column="73" selection-end-line="34" selection-end-column="73" />
-              <caret line="1432" column="16" selection-start-line="1432" selection-start-column="16" selection-end-line="1432" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SnoopyController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RepairLogin/Controller/SnoopyController.class.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -148,7 +146,6 @@
         <option value="$PROJECT_DIR$/SchoolCardLogin/Model/SchoolCardLoginModel.class.php" />
         <option value="$PROJECT_DIR$/SchoolCardLogin/Model/WeixinAddonModel.class.php" />
         <option value="$PROJECT_DIR$/SchoolCardLogin/Controller/SchoolCardLoginController.class.php" />
-        <option value="$PROJECT_DIR$/SchoolCardLogin/View/default/SchoolCardLogin/login.html" />
         <option value="$PROJECT_DIR$/RepairLogin/RepairLoginAddon.class.php" />
         <option value="$PROJECT_DIR$/RepairLogin/Controller/RepairLoginController.class.php" />
         <option value="$PROJECT_DIR$/RepairLogin/Controller/SimpleHtmlController.class.php" />
@@ -159,6 +156,7 @@
         <option value="$PROJECT_DIR$/LibLogin/LibLoginAddon.class.php" />
         <option value="$PROJECT_DIR$/LibLogin/Controller/LibLoginController.class.php" />
         <option value="$PROJECT_DIR$/LibLogin/View/default/LibLogin/login.html" />
+        <option value="$PROJECT_DIR$/SchoolCardLogin/View/default/SchoolCardLogin/login.html" />
       </list>
     </option>
   </component>
@@ -216,6 +214,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Addons" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Addons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Addons" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolCardLogin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Addons" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Addons" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolCardLogin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="default" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SchoolCardLogin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -474,12 +512,12 @@
       <updated>1473402032144</updated>
       <workItem from="1473402033292" duration="1669000" />
       <workItem from="1473406752853" duration="1795000" />
-      <workItem from="1473663880478" duration="5203000" />
+      <workItem from="1473663880478" duration="5251000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8667000" />
+    <option name="totallyTimeSpent" value="8715000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -833,14 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SchoolCardLogin/View/default/SchoolCardLogin/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="817">
-          <caret line="103" column="69" selection-start-line="103" selection-start-column="69" selection-end-line="103" selection-end-column="69" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RepairLogin/RepairLoginAddon.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -934,6 +964,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="58" column="20" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolCardLogin/View/default/SchoolCardLogin/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
