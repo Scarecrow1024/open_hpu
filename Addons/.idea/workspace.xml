@@ -54,8 +54,8 @@
       <file leaf-file-name="JiDianController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JiDian/Controller/JiDianController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3876">
-              <caret line="228" column="23" selection-start-line="228" selection-start-column="23" selection-end-line="228" selection-end-column="23" />
+            <state relative-caret-position="306">
+              <caret line="159" column="218" selection-start-line="159" selection-start-column="218" selection-end-line="159" selection-end-column="218" />
               <folding />
             </state>
           </provider>
@@ -545,12 +545,12 @@
       <updated>1473402032144</updated>
       <workItem from="1473402033292" duration="1669000" />
       <workItem from="1473406752853" duration="1795000" />
-      <workItem from="1473663880478" duration="5590000" />
+      <workItem from="1473663880478" duration="5716000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9054000" />
+    <option name="totallyTimeSpent" value="9180000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -1004,8 +1004,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JiDian/Controller/JiDianController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3876">
-          <caret line="228" column="23" selection-start-line="228" selection-start-column="23" selection-end-line="228" selection-end-column="23" />
+        <state relative-caret-position="306">
+          <caret line="159" column="218" selection-start-line="159" selection-start-column="218" selection-end-line="159" selection-end-column="218" />
           <folding />
         </state>
       </provider>

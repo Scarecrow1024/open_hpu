@@ -26,7 +26,7 @@ class JiDianController extends AddonsController{
         /*
             登陆并设置新的TWFID和ENABLE_RANDCODE获取重定向地址
         */
-        /*$arr=array(); 
+        $arr=array();
         $arr[0][]="311408000107";
         $arr[0][]="155506";
         $arr[1][]="311502020328";
@@ -49,15 +49,15 @@ class JiDianController extends AddonsController{
         $arr[9][]="300012";
         $arr[10][]="311503020105";
         $arr[10][]="217724";
-        $ran=rand(0,10);*/
-        $arr=$this->gett();
+        $ran=rand(0,10);
+        /*$arr=$this->gett();
         foreach($arr as $k=>$v){
             $rand0=$k;
             $rand1=substr($v,12);
-        }
+        }*/
 
         $ch=curl_init();
-        $post="mitm_result=&svpn_name=".$rand0."&svpn_password=".$rand1."&svpn_rand_code="; 
+        $post="mitm_result=&svpn_name=".$arr[$ran][0]."&svpn_password=".$arr[$ran][0]."&svpn_rand_code=";
         
         curl_setopt($ch,CURLOPT_URL,"https://vpn.hpu.edu.cn/por/login_psw.csp?sfrnd=2346912324982305");
         curl_setopt($ch,CURLOPT_REFERER,"https://vpn.hpu.edu.cn/por/login_psw.csp");
@@ -157,7 +157,7 @@ class JiDianController extends AddonsController{
     public function auto_verify(){
         $ch=curl_init();
 
-        $post="url=http://niool.com/weixin/Verify/default.jpg&service=OcrKingForCaptcha&language=eng&charset=7&apiKey=7a035b90a8142c343eq9CThVaZK2nbB9kYb1LrOeCxqtH0wl7upz8Hk8pii90sXv6e1kd6qHQ9&type=http://niool.com/weixin/Verify/default.jpg";  
+        $post="url=http://open.niool.com/Verify/default.jpg&service=OcrKingForCaptcha&language=eng&charset=7&apiKey=7a035b90a8142c343eq9CThVaZK2nbB9kYb1LrOeCxqtH0wl7upz8Hk8pii90sXv6e1kd6qHQ9&type=http://open.niool.com/Verify/default.jpg";
         curl_setopt($ch,CURLOPT_URL,"http://s.ocrking.net:6080/ok.html");
         //curl_setopt($ch,CURLOPT_REFERER,"http://lab.ocrking.com/");
         curl_setopt($ch, CURLOPT_HEADER, 0);
