@@ -182,8 +182,12 @@ class LibLoginController extends AddonsController{
     public function grzx(){
         $time=date('G')*3600+date('i')*60+date('s')-300;
         $tday1=$time;
-        $studentid = $_POST['zjh'];
-        setcookie('id',$studentid);
+        if(isset($_COOKIE['id'])){
+            $studentid = $_COOKIE['id'];
+        }else{
+            $studentid = $_POST['zjh'];
+            setcookie('id',$studentid);
+        }
         $ch=curl_init();
         $post="dzh=".$studentid."&tday1=".$tday1."&submit1=";
         $url="http://218.196.244.90:8080/dzff.php";
