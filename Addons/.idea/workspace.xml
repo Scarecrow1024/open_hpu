@@ -49,8 +49,8 @@
       <file leaf-file-name="LibLoginController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LibLogin/Controller/LibLoginController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+            <state relative-caret-position="187">
+              <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -479,12 +479,12 @@
       <updated>1473402032144</updated>
       <workItem from="1473402033292" duration="1669000" />
       <workItem from="1473406752853" duration="1795000" />
-      <workItem from="1473663880478" duration="4667000" />
+      <workItem from="1473663880478" duration="4791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8131000" />
+    <option name="totallyTimeSpent" value="8255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -937,8 +937,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LibLogin/Controller/LibLoginController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+        <state relative-caret-position="187">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>

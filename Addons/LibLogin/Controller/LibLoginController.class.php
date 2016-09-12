@@ -7,6 +7,10 @@ class LibLoginController extends AddonsController{
     public function ser(){
         $this->display();
     }
+
+    public function login(){
+        $this->display();
+    }
     
     public function gccx(){
         $rs=curl_init();
