@@ -11,7 +11,7 @@ class SchoolCardLoginController extends AddonsController{
     public function ajaxcard(){
             $rs=curl_init();
             $studentid=$_POST['zjh'];
-            $idcard=substr($_POST['mm'], 11, 6);
+            $idcard=$_POST['mm'];
             //post提交
             $url="http://my.hpu.edu.cn/userPasswordValidate.portal";
             $post="Login.Token1=".$studentid."&Login.Token2=".$idcard."&goto=http%3A%2F%2Fmy.hpu.edu.cn%2FloginSuccess.portal&gotoOnFail=http%3A%2F%2Fmy.hpu.edu.cn%2FloginFailure.portal";
