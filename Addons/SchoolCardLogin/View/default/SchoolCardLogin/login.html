@@ -53,6 +53,7 @@
                 var mm = $("#input2").val();
                 $.post("{:U('ajaxcard')}",{'zjh':zjh,'mm':mm},function(data){
                     alert(data);
+                    return false;
                 });
             });
         });
