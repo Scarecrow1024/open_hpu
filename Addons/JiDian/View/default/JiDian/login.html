@@ -43,10 +43,10 @@
         $(document).ready(function() {
             /* 验证码刷新 */
             $('#imgId').click(function() {
-                $("#imgId").attr('src',"{:U('verify')}");
+                $("#imgId").attr('src',"{:U('auto_verify')}");
             });
             $('#verify').click(function() {
-                $("#imgId").attr('src','{:U("verify")}');
+                $("#imgId").attr('src','{:U("auto_verify")}');
             });
 
             /* 数据校验 */
@@ -103,10 +103,10 @@
                         </div>
                         </literal>
                         <div class="col-xs-4" style="line-height: 30px;padding: 0px;">
-                            <img src="{:U('verify')}" alt="点击获取" id="imgId" style="height: 27px;" onclick="this.src='verify.php?'+Math.random()">
+                            <img src="{:U('auto_verify')}" alt="点击获取" id="imgId" style="height: 27px;" onclick="this.src='auto_verify.php?'+Math.random()">
                         </div>
                         <div class="col-xs-4" style="line-height: 30px;padding: 0px;">
-                            <input type="button" id="verify" class="btn btn-info btn-sm " onclick="this.src='{:U('verify')}?'+Math.random()" value="看不清换张">                      
+                            <input type="button" id="verify" class="btn btn-info btn-sm " onclick="this.src='{:U('auto_verify')}?'+Math.random()" value="看不清换张">
                         </div>
                     </div>
 
