@@ -15,15 +15,15 @@ class WeixinAddonModel extends WeixinModel {
                 'PicUrl' => 'http://us.51edu.com.au/sites/51edu.com.au/files/file/GPA.jpg',
                 'Url' => $url
             );
-        $user=M('user');
+        /*$user=M('user');
         $openid=get_openid();
         $url=addons_url ('Binding://Binding/login?openid='.$openid);
         $card = $user->where("openid=".'"'.$openid.'"')->getField('studentid');
         if($card==0){
         	$this->replyText('请绑定账号后使用,回复绑定');
-        }else{
+        }else{*/
         	$this->replyNews($dataArr);
-        }	
+        //}
 	}
 	
 	// 关注公众号事件

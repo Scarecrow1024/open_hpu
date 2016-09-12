@@ -16,15 +16,15 @@ class WeixinAddonModel extends WeixinModel {
                 'PicUrl' => 'http://ww2.sinaimg.cn/bmiddle/005AgsXujw1efv2hbkl17j31kw148k9v.jpg',
                 'Url' => $url
             );
-        $user=M('user');
+        /*$user=M('user');
         $openid=get_openid();
         $url=addons_url ('Binding://Binding/login?openid='.$openid);
         $card = $user->where("openid=".'"'.$openid.'"')->getField('studentid');
         if($card==0){
         	$this->replyText('绑定账号后查询历年成绩,回复绑定完成认证');
-        }else{
+        }else{*/
 			$this->replyNews($dataArr);
-		}
+		//}
 	}
 	
 	// 关注公众号事件

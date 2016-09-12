@@ -17,7 +17,7 @@ class CourseListController extends AddonsController{
     public function ycourse(){
         $openid=get_openid();
         $user=M('user');
-        $day=$user->where("openid=".'"'.$openid.'"')->getField('yscore'); 
+        $day=$user->where("openid=".'"'.$openid.'"')->getField('yscore');
         $this->assign('day',$day);
         $this->display();                    
     }
