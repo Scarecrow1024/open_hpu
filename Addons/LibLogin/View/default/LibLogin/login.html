@@ -48,14 +48,6 @@
                 if (zjh == '') {alert('请输入学号'); return false;}
                 if (mm == '') {alert('请输入密码'); return false;}
             });
-            $('#buttonId').click(function() {
-                var zjh= $("#input1").val();
-                var mm = $("#input2").val();
-                $.post("{:U('ajaxcard')}",{'zjh':zjh,'mm':mm},function(data){
-                    alert(data);
-                    return false;
-                });
-            });
         });
     </script>
 </head>
@@ -71,14 +63,14 @@
     <div class="row">
         <div class="panel panel-default" id="content">
             <div class="panel-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="post" action="{:U('grzx')}">
                 <literal>
                     <div class="form-group">
                         <label for="input1" class="col-xs-2 control-label">
                             <span class="glyphicon glyphicon-user"></span>
                         </label>
                         <div class="col-xs-10">
-                            <input type="text" class="form-control" name="zjh" value="<?php echo $studentid?>" id="input1" placeholder="学号">
+                            <input type="text" class="form-control" name="zjh" value="" id="input1" placeholder="学号">
                         </div>
                     </div>
                     <div class="form-group">
@@ -86,7 +78,7 @@
                             <span class="glyphicon glyphicon-education"></span>
                         </label>
                         <div class="col-xs-10">
-                            <input type="password" class="form-control" value="<?php echo $mm?>" name="mm" id="input2" placeholder="密码">
+                            <input type="password" class="form-control" value="" name="mm" id="input2" placeholder="密码">
                             <input type="hidden" name="openid" value=""> 
                         </div>
                     </div>
@@ -101,7 +93,7 @@
     </div>
     <br>
     <div class="col-xs-12 " style="text-align: left;">
-        <strong style="color: #CD69C9">密码为身份证号的第12到第17位共6位数字</strong>
+        <strong style="color: #CD69C9">密码为身份证号的后六位</strong>
     </div>
     <footer>
         &copy;open.niool.com技术支持<br>
