@@ -1,0 +1,285 @@
+<!-- 头部 -->
+<include file="Public/mobile_head"/>
+<!--<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+<if condition="$isend">
+<link href="{:ADDON_PUBLIC_PATH}/xydzp.css?v={:SITE_VERSION}" rel="stylesheet"  type="text/css">
+<body class="xydzp-end">
+    <div class="main">
+	    <div class="banner">
+			    <img src="{:ADDON_PUBLIC_PATH}/images/end.jpg">
+		</div>
+        <div class="content" style=" margin-top:10px">
+            <div class="boxcontent">
+                <div class="box">
+                    <div class="title-red">活动结束说明：</div>
+                    <div class="Detail">
+                        <p> 亲，活动已经结束，请继续关注我们的后续活动哦。</p>
+                    </div>
+                </div>
+    		 </div>
+    		<div style="margin: 20px 10px 30px 10px;text-align:center;">
+				<input type=button  value="查看中奖记录" onclick="location.href='{:U('zjinfo?id='.$xydzp_id)}'" style="color:#000000; background-color: #FEF8B2;width: 45%; font-size: larger;line-height: 30px; border:1px #5F88B7 solid; border-radius:4px;">
+			</div>
+		</div>
+    </div>
+	<FOOTER style="text-align: center; color: rgb(255, 216, 0); margin-right: 20px;">
+				<p class="copyright">2015&copy;&nbsp;&nbsp;@桃李科技</p>
+	</FOOTER>
+</body>
+<else />
+<if condition="$isinfo_url eq ''">
+<link href="{:ADDON_PUBLIC_PATH}/xydzp.css?v={:SITE_VERSION}" rel="stylesheet"  type="text/css">
+<BODY class="xydzp-winning">				
+			<script type="text/javascript" src="{:ADDON_PUBLIC_PATH}/js/jQueryRotate.2.2.js"></script>
+			<script type="text/javascript" src="{:ADDON_PUBLIC_PATH}/js/jquery.easing.min.js"></script>		
+			<script charset="gb2312" type="text/javascript" src="{:ADDON_PUBLIC_PATH}/js/init.js"></script>
+			<script type="text/javascript">
+			   var jplist={$jplist};
+			   var posturl="{$joinurl}";
+			   var zpimg ="{:ADDON_PUBLIC_PATH}/images/zp.png";	
+			</script>
+			
+			
+       <style>
+               	#share_img{width: 80%; height: auto;}
+            	.weixin-tip{display:none; position: fixed; right:0; top:0; bottom:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80);  height: 100%; width: 100%; z-index: 100;}
+            	.weixin-tip p{text-align: right; padding:0 5%;} 
+       </style>
+       <div class="weixin-tip">
+    		<p>
+    		    <img style="height:0;" src="{:ADDON_PUBLIC_PATH}/images/fm.png" alt="分享"/>
+    			<img id="share_img" src="{:ADDON_PUBLIC_PATH}/images/share.png" alt="分享" onclick='$(".weixin-tip").css("display","none");'/>
+    		</p>
+    	</div>
+    	
+			<DIV class="main">           
+				<DIV id="outercont">
+					<DIV id="outer-cont">					
+						<DIV id="outer">
+							<canvas id="wheelcanvas" width="227" height="227">
+							</canvas>
+						</DIV>
+					</DIV>
+					<DIV id="inner-cont">
+						<DIV id="inner">
+							<img id="startbtn" src="{:ADDON_PUBLIC_PATH}/images/start.png" />
+						</DIV>
+					</DIV>
+				</DIV>
+				<DIV class="content">
+					<DIV class="boxcontent boxyellow" id="result" style="display: none;">
+						<DIV class="box">
+							<DIV class="title-orange">
+								<SPAN>
+									恭喜你中奖了
+								</SPAN>
+							</DIV>
+							<DIV class="Detail">
+								<P>
+									你中了：
+									<SPAN class="red" id="prizetype">
+										感谢参与
+									</SPAN>
+								</P>
+								<P style="display: none;">
+									兑奖SN码：
+									<SPAN class="red" id="sncode">
+									</SPAN>
+								</P>
+								
+								<P class="red" id="red">
+									奖品已经关联您的微信号，你可向“小马拜师家长端”公众号发送【{$hddata.keyword}】进行查询!
+								</P>
+							</DIV>
+						</DIV>
+					</DIV>
+					<DIV class="boxcontent boxyellow">
+						<DIV class="box">
+							<DIV class="title-orange">
+								参与方法:
+							</DIV>
+							<DIV class="Detail">
+								{$hddata.guiz|htmlspecialchars_decode}
+							</DIV>
+						</DIV>
+					</DIV>
+					<DIV class="boxcontent boxyellow">
+						<DIV class="box">
+							<DIV class="title-orange">
+								最新中奖:
+							</DIV>
+							<DIV class="Detail">
+							   <table style="margin:0 auto;" class="table table-bordered">
+									<tr>
+										<th>昵称</th>
+										<th>奖品</th>
+										<th>中奖时间</th>
+									</tr>
+								<volist name="zjuserlist" id="jp">
+									<tr>
+										<td>{$jp.truename}</td>
+										<td>{$jp.title}</td>
+										<td>{$jp.zjdate|time_format}</td>
+									</tr>
+								</volist>
+								</table>
+							</DIV>
+						</DIV>
+					</DIV>
+				</DIV>
+				<DIV class="boxcontent boxyellow">
+					<DIV class="box">
+						<DIV class="title-green">
+							<SPAN>
+								奖项设置：
+							</SPAN>
+						</DIV>
+						<DIV class="Detail" style="text-align:center;">
+							<ul style="margin:0 auto;">
+							<volist name="jplists" id="jp">
+								<if condition="$jp.isdf eq '0'">
+								<li style="float:left; margin:5px;">
+								<div><img style="border:2px solid #FFF;" src="__ROOT__{$jp['pic']|get_cover='path'}" width="82px" height="100px"/></div>
+								<P>{$jp.miaoshu}</P>
+								</li>
+								</if>
+							</volist>
+							</ul>
+							<div style="clear:both;"></div>
+						</DIV>
+					</DIV>
+				</DIV>
+			</DIV>
+			<DIV class="boxcontent boxyellow">
+				<DIV class="box">
+					<DIV class="title-green">
+						活动介绍：
+					</DIV>
+					<DIV class="Detail">
+						<P>
+							{$hddata.des|htmlspecialchars_decode}
+						</P>
+					</DIV>
+				</DIV>
+			</DIV>
+			<DIV class="boxcontent boxyellow">
+				<DIV class="box">
+					<DIV class="title-green">
+						活动说明：
+					</DIV>
+					<DIV class="Detail">
+						<P class="red">
+							本次活动每天可以转{$hddata.choujnum}次!
+							<br/>
+							您还有
+							<SPAN id="count">
+								{$cjnum}
+							</SPAN>
+							次机会.
+						</P>
+						<P class="green">
+							活动时间:
+							<br/>
+							{$hddata.start_date}至{$hddata.end_date}
+						</P>
+						<P>
+							欢迎参加幸运大转盘抽奖
+							<BR>
+							亲，需要绑定账号才可以参加哦
+						</P>
+					</DIV>
+				</DIV>
+				<div style="margin: 20px 10px 30px 10px;text-align:center;">
+				<input type=button  value="查看中奖记录" onclick="location.href='{:U('zjinfo?id='.$xydzp_id)}'" style="color:#000000; background-color: #FEF8B2;width: 45%; font-size: larger;line-height: 30px; border:1px #5F88B7 solid; border-radius:4px;">
+				</div>
+			</DIV>
+			<audio id="playyy" src="{:ADDON_PUBLIC_PATH}/images/m.mp3" style="display:none;">
+			</audio>
+			<FOOTER style="text-align: center; color: rgb(255, 216, 0); margin-right: 20px;">
+		      	<p class="copyright">2015&copy;&nbsp;&nbsp;@桃李科技</p>
+			</FOOTER>		
+</BODY>
+
+<else />
+<link rel="stylesheet" type="text/css" href="{:ADDON_PUBLIC_PATH}/info.css" media="all">
+<body>
+	<script type="text/javascript" src="{:ADDON_PUBLIC_PATH}/js/initinfo.js"></script>
+	<script>
+		var posturl="{$isinfo_url}";
+	</script>
+	<div id="dail" style="height: 100px; width: 300px; opacity: 0.5;background-color:#000; border: solid 10px #999999;border-radius:10px;display: none;">
+        &nbsp;
+		</div>
+		<div id="dail2" style="height: 100px; width: 300px;font-size:20px;opacity: 1;text-align:center; color:#FFF; border-radius:10px;display: none;">
+			<span id="alertinfo">抽奖需要先完善您的基本信息<br/>便于中奖后联系</span>
+			<br/>
+			<button id="btn_alert" class="home_btn mb_10 flex_1" >确定</button>
+	</div>	
+	<div class="container body">
+    	<img src="{:ADDON_PUBLIC_PATH}/images/info_head.png" width="100%"/>
+    	<div class="p_10"> 
+            <!-- 表单 -->          
+              <!-- 基础文档模型 -->
+              <div id="tab1" class="tab-pane">                   
+                   <div class="form-item cf">
+                        <label class="item-label">昵称</label>
+                        <div class="controls">
+                          <input type="text" class="text input-medium" name="truename" id="truename" value="" />
+                         </div>
+                   </div>                   
+                   <div class="form-item cf">
+                        <label class="item-label">联系电话</label>
+                        <div class="controls">
+                          <input type="text" class="text input-large" name="mobile" id="mobile" value="" />
+                      	</div>
+                   </div>
+                                                 
+                   <div class="form-item cf tb pt_10">
+                         <input type="hidden" class="text input-large" name="id" value="{$_GET['id']}">
+                		<button class="home_btn submit-btn ajax-post mb_10 flex_1" id="btn_submit" type="button" target-form="form-horizontal">提  交</button>
+                  </div>
+          	</div>           
+        </div>
+           <p class="copyright">2015&copy;&nbsp;&nbsp;@桃李科技</p>
+		<script type="text/javascript">
+			
+$(function(){
+	$("#btn_alert").bind("click",HideDiv)
+	ShowDiv();
+	
+	$("#btn_submit").bind("click",function(){
+		//$.Dialog.loading();//loading等待调用  loading完成$.Dialog.close();关闭loading
+		//$.Dialog.success();//成功调用 提示一秒后自动关闭
+		var truename = $('#truename').val();
+		var mobile = $('#mobile').val();
+		if(truename!=undefined && truename==""){
+			$.Dialog.fail("请填写昵称！");//成功调用 提示一秒后自动关闭
+			return false;
+		}
+		if(mobile!=undefined && mobile==""){
+			$.Dialog.fail("请填写联系电话！");//成功调用 提示一秒后自动关闭
+			return false;
+		}
+	
+		$.ajax({
+			type: 'POST',
+            url: posturl,
+			data:{truename:truename,mobile:mobile},
+            dataType: 'json',
+            cache: false,
+            error: function() {
+				
+            },
+            success: function(json) {
+                //alert(JSON.stringify(json));
+                location.reload();
+            }
+        });
+	});
+});
+		</script>
+    </div>
+</body>
+</if>
+</if>
+</HTML>
