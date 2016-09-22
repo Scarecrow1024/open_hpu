@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="348cef5e-8e19-4309-a29b-2eb4603b5324" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php" afterPath="$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html" afterPath="$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html" />
     </list>
     <ignored path="weiphp2.0.iws" />
@@ -39,8 +38,8 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+            <state relative-caret-position="578">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -306,12 +305,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1474507380093</updated>
-      <workItem from="1474507382028" duration="2973000" />
+      <workItem from="1474507382028" duration="3075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2973000" />
+    <option name="totallyTimeSpent" value="3075000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -388,8 +387,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="578">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
           <folding />
         </state>
       </provider>
