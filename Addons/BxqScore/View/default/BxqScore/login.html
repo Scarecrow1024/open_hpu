@@ -42,10 +42,11 @@
             wx.addCard({
                 cardList: [{
                     cardId: '10001',
-                    cardExt: ''
+                    cardExt: "<?php echo $cardSign?>"
                 }], // 需要添加的卡券列表
                 success: function (res) {
                     var cardList = res.cardList; // 添加的卡券列表信息
+                    alert('123');
                 }
             });
             wx.onMenuShareTimeline({

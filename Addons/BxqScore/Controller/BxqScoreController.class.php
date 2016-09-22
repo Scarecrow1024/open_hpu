@@ -363,8 +363,7 @@ class BxqScoreController extends AddonsController{
         $api_ticket = $j['ticket'];//get JSAPI
         $str2 = "&timestamp=".$timestamp.",signature=".$signature."";
         $cardSign = sha1($str2);
-        echo $cardSign;
-        die;
+        $this->assign('cardSign', $cardSign);
 
         $this->assign('timestamp', $timestamp);
         $this->assign('noncestr',$noncestr);
