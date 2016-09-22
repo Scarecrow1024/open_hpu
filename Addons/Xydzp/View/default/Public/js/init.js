@@ -1,12 +1,12 @@
  $(function() {
-            // wx.config({
-            //     debug: true, // ¿ªÆôµ÷ÊÔÄ£Ê½,µ÷ÓÃµÄËùÓÐapiµÄ·µ»ØÖµ»áÔÚ¿Í»§¶Ëalert³öÀ´£¬ÈôÒª²é¿´´«ÈëµÄ²ÎÊý£¬¿ÉÒÔÔÚpc¶Ë´ò¿ª£¬²ÎÊýÐÅÏ¢»áÍ¨¹ýlog´ò³ö£¬½öÔÚpc¶ËÊ±²Å»á´òÓ¡¡£
-            //     appId: 'wx8b7419eeb33a6e55', // ±ØÌî£¬¹«ÖÚºÅµÄÎ¨Ò»±êÊ¶
-            //     timestamp: , // ±ØÌî£¬Éú³ÉÇ©ÃûµÄÊ±¼ä´Á
-            //     nonceStr: '', // ±ØÌî£¬Éú³ÉÇ©ÃûµÄËæ»ú´®
-            //     signature: '',// ±ØÌî£¬Ç©Ãû£¬¼û¸½Â¼1
-            //     jsApiList: [] // ±ØÌî£¬ÐèÒªÊ¹ÓÃµÄJS½Ó¿ÚÁÐ±í£¬ËùÓÐJS½Ó¿ÚÁÐ±í¼û¸½Â¼2
-            // });
+             wx.config({
+                 debug: true,
+                 appId: 'wx8b7419eeb33a6e55',
+                 timestamp: ,
+                 nonceStr: '',
+                 signature: '',
+				 jsApiList: []
+             });
      
      
 				$("#wheelcanvas").rotate({
@@ -18,7 +18,7 @@
                 var jsonData = {};
                 var isStart = false;
                 
-                $(document).attr("title","Õâ¸öÊÇÕæµÄ,Ò»´ó²¨ºì°üÀ´À²...");
+                $(document).attr("title","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,Ò»ï¿½ó²¨ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½...");
                 function lottery() {
                     var start = function() {
                         if (isStart) {
@@ -31,7 +31,7 @@
                             dataType: 'json',
                             cache: false,
                             error: function() {
-								alert('°¥Ñ½£¬Ã»ÓÐÖÐ°¡£¡¾ÝËµ·ÖÏí¿ÉÒÔ»ñµÃ¸ü¶à³é½±´ÎÊýÒÔ¼°ÖÐ½±¼¸ÂÊ£¡');  
+								alert('ï¿½ï¿½Ñ½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ð°ï¿½ï¿½ï¿½ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô»ï¿½Ã¸ï¿½ï¿½ï¿½é½±ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½');  
 								$(".weixin-tip").css("display","block");
 								isStart = false;
                                 return false
@@ -40,7 +40,7 @@
                                 var type=json.type;
 								switch(type){
 									case '0':
-										alert("ÄúÒÑ¾­Ã»ÓÐ³é½±´ÎÊýÁË,¾ÝËµ·ÖÏí¿ÉÒÔ»ñµÃ¸ü¶à³é½±´ÎÊýÒÔ¼°ÖÐ½±¼¸ÂÊ£¡");
+										alert("ï¿½ï¿½ï¿½Ñ¾ï¿½Ã»ï¿½Ð³é½±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô»ï¿½Ã¸ï¿½ï¿½ï¿½é½±ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½");
 										$(".weixin-tip").css("display","block");
 										isStart = false;
 										break;
@@ -61,7 +61,7 @@
 												    if(json.isdf!=1){
     													$("#result").show();
     													$("#prizetype").html(p);
-    													$(document).attr("title","Õâ¸öÊÇÕæµÄ,ÎÒ³éµ½"+p+"À²,¾ÝËµ·ÖÏí¿ÉÒÔ»ñµÃ¸ü¶à³é½±´ÎÊýÒÔ¼°ÖÐ½±¼¸ÂÊ£¡...");
+    													$(document).attr("title","ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½Ò³éµ½"+p+"ï¿½ï¿½,ï¿½ï¿½Ëµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô»ï¿½Ã¸ï¿½ï¿½ï¿½é½±ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½Ê£ï¿½...");
                                                         $(".weixin-tip").css("display","block");
 												    }else{
 												        //alert(p);
@@ -72,11 +72,11 @@
 										}
 										break;
 									case '3':
-										alert("»î¶¯»¹Ã»ÓÐ¿ªÊ¼Å¶!");
+										alert("ï¿½î¶¯ï¿½ï¿½Ã»ï¿½Ð¿ï¿½Ê¼Å¶!");
 										isStart = false;
 										break;
 									case '4':
-										alert("»î¶¯ÒÑ¾­½áÊøÀ²£¡");
+										alert("ï¿½î¶¯ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 										isStart = false;
 										break;
 								}
@@ -106,17 +106,17 @@
                         var textRadius = 80;
                         var insideRadius = 20;
                         ctx = canvas.getContext("2d");
-						//´´½¨ÐÂµÄÍ¼Æ¬¶ÔÏó
+						//ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½Í¼Æ¬ï¿½ï¿½ï¿½ï¿½
 						var img = new Image();						
-						//Ö¸¶¨Í¼Æ¬µÄURL						
+						//Ö¸ï¿½ï¿½Í¼Æ¬ï¿½ï¿½URL						
 						img.src = zpimg;					
-						//ä¯ÀÀÆ÷¼ÓÔØÍ¼Æ¬Íê±ÏºóÔÙ»æÖÆÍ¼Æ¬						
+						//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ïºï¿½ï¿½Ù»ï¿½ï¿½ï¿½Í¼Æ¬						
 						img.onload = function(){						
 							ctx.clearRect(0, 0, 227, 227);											
 							ctx.drawImage(img, 0, 0);
 							ctx.strokeStyle = "#e9e8e5";
 							ctx.lineWidth = 1;
-							ctx.font = 'bold 14px ºÚÌå';
+							ctx.font = 'bold 14px ï¿½ï¿½ï¿½ï¿½';
 							for (var i = 0; i < jplist.length; i++) {
 								var angle = startAngle + i * arc;
 								if (i % 2 == 1) {
@@ -128,7 +128,7 @@
 									ctx.fillStyle = colors[(i % 2)];
 								}
 								ctx.beginPath();
-								//¼ÆËãÆ¬Êý								
+								//ï¿½ï¿½ï¿½ï¿½Æ¬ï¿½ï¿½								
 								ctx.arc(cwidth / 2, cwidth / 2, outsideRadius, angle, angle + arc, false);
 								ctx.arc(cwidth / 2, cwidth / 2, insideRadius, angle + arc, angle, true);
 								ctx.shadowBlur = 5;
@@ -144,7 +144,7 @@
 								ctx.translate(cwidth / 2 + Math.cos(angle + arc / 2) * textRadius, cwidth / 2 + Math.sin(angle + arc / 2) * textRadius);
 								ctx.rotate(angle + arc / 2 + Math.PI / 2);
 								var text = jplist[i].title;
-								//»æÖÆÎÄ×Ö
+								//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 								drawText(text,ctx,colors1[(i % 2)]);
 								//ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
 								ctx.restore()
