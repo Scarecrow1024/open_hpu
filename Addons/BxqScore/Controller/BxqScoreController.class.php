@@ -356,15 +356,6 @@ class BxqScoreController extends AddonsController{
         $signature = sha1($str1);
         //echo $signature;
 
-        //微信卡券
-        $api = file_get_contents("https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$access_token."&type=wx_card");
-        $api = json_decode($api);
-        $j = get_object_vars($api);
-        $api_ticket = $j['ticket'];//get JSAPI
-        $str2 = "&timestamp=".$timestamp.",signature=".$signature."";
-        $cardSign = sha1($str2);
-        $this->assign('cardSign', $cardSign);
-
         $this->assign('timestamp', $timestamp);
         $this->assign('noncestr',$noncestr);
         $this->assign('signature', $signature);
