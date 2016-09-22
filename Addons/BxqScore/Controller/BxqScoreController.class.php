@@ -337,6 +337,9 @@ class BxqScoreController extends AddonsController{
             session('access_token',$access_token,7200);
         }
 
+        print_r($_SESSION);
+        die;
+
         if(isset($_SESSION['jsapi_ticket'])){
             $jsapi_ticket = $_SESSION['jsapi_ticket'];
         }else{
