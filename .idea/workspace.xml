@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php" line="708" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="348cef5e-8e19-4309-a29b-2eb4603b5324" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php" afterPath="$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php" />
@@ -48,8 +51,8 @@
       <file leaf-file-name="XydzpController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="712" column="21" selection-start-line="712" selection-start-column="21" selection-end-line="712" selection-end-column="21" />
+            <state relative-caret-position="374">
+              <caret line="714" column="19" selection-start-line="714" selection-start-column="19" selection-end-line="714" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -474,12 +477,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1474507380093</updated>
-      <workItem from="1474507382028" duration="13132000" />
+      <workItem from="1474507382028" duration="13482000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13132000" />
+    <option name="totallyTimeSpent" value="13482000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -516,7 +519,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -648,14 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Model/WeixinAddonModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="339">
@@ -682,10 +679,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Model/WeixinAddonModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="712" column="21" selection-start-line="712" selection-start-column="21" selection-end-line="712" selection-end-column="21" />
+        <state relative-caret-position="374">
+          <caret line="714" column="19" selection-start-line="714" selection-start-column="19" selection-end-line="714" selection-end-column="19" />
           <folding />
         </state>
       </provider>
