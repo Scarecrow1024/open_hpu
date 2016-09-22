@@ -348,7 +348,7 @@ class BxqScoreController extends AddonsController{
             $jsapi_ticket = $j['ticket'];//get JSAPI
             session('jsapi_ticket',$jsapi_ticket,7200);
         }
-        echo $access_token;
+        //echo $access_token;
         $timestamp = time();
         $noncestr = "Wm3WZYTPz0wzccnW";
         $url='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
