@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="348cef5e-8e19-4309-a29b-2eb4603b5324" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php" afterPath="$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html" afterPath="$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html" />
     </list>
     <ignored path="weiphp2.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,24 +24,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html">
+      <file leaf-file-name="BxqScoreController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="32" column="21" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="547">
+              <caret line="341" column="10" selection-start-line="341" selection-start-column="10" selection-end-line="341" selection-end-column="10" />
+              <folding>
+                <element signature="e#45#85#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BxqScoreController.class.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="342" column="12" selection-start-line="342" selection-start-column="12" selection-end-line="342" selection-end-column="12" />
-              <folding>
-                <element signature="e#45#85#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="493">
+              <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -73,9 +74,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html" />
         <option value="$PROJECT_DIR$/Addons/BxqScore/Model/BxqScoreModel.class.php" />
         <option value="$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php" />
+        <option value="$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html" />
       </list>
     </option>
   </component>
@@ -305,12 +306,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1474507380093</updated>
-      <workItem from="1474507382028" duration="2720000" />
+      <workItem from="1474507382028" duration="2973000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2720000" />
+    <option name="totallyTimeSpent" value="2973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -359,14 +360,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="32" column="21" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Model/WeixinAddonModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
@@ -385,11 +378,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="342" column="12" selection-start-line="342" selection-start-column="12" selection-end-line="342" selection-end-column="12" />
+        <state relative-caret-position="547">
+          <caret line="341" column="10" selection-start-line="341" selection-start-column="10" selection-end-line="341" selection-end-column="10" />
           <folding>
             <element signature="e#45#85#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="32" column="45" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+          <folding />
         </state>
       </provider>
     </entry>

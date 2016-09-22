@@ -339,8 +339,11 @@ class BxqScoreController extends AddonsController{
         $url='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         $str1 = "jsapi_ticket=".$jsapi_ticket."&noncestr=".$noncestr."&timestamp=".$timestamp."&url=".$url."";
         $signature = sha1($str1);
-        echo $signature;
-        die;
+        //echo $signature;
+
+        $this->assign('timestamp', $timestamp);
+        $this->assign('noncestr',$noncestr);
+        $this->assign('signature', $signature);
 
 
         $user=M('user');
