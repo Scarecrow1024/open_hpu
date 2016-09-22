@@ -1,6 +1,46 @@
 <!-- 头部 -->
 <include file="Public/mobile_head"/>
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+	wx.config({
+		debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+		appId: 'wx3f2c8f9cbc5cbd3f', // 必填，公众号的唯一标识
+		timestamp: "<?php echo $res['timestamp']?>", // 必填，生成签名的时间戳
+		nonceStr: "<?php echo $res['noncestr']?>", // 必填，生成签名的随机串
+		signature: "<?php echo $res['signature']?>",// 必填，签名，见附录1
+		jsApiList: [
+			'onMenuShareTimeline',
+			'onMenuShareAppMessage',
+			'onMenuShareQQ',
+			'onMenuShareQZone'
+		] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+	});
+	wx.ready(function(){
+		wx.onMenuShareTimeline({
+			title: 'share WeChat', // 分享标题
+			link: 'http://www.baidu.com', // 分享链接
+			imgUrl: 'http://open.niool.com/index.php?s=/addon/BxqScore/BxqScore/verify.html', // 分享图标
+			success: function () {
+				alert('share we')// 用户确认分享后执行的回调函数
+			},
+			cancel: function () {
+				alert('share we false')// 用户取消分享后执行的回调函数
+			}
+		});
+		wx.onMenuShareQZone({
+			title: 'share Qzone', // 分享标题
+			desc: '来自微信的分享请在微信中打开', // 分享描述
+			link: 'http://www.baidu.com', // 分享链接
+			imgUrl: 'http://open.niool.com/index.php?s=/addon/BxqScore/BxqScore/verify.html', // 分享图标
+			success: function () {
+				alert('share qzone')// 用户确认分享后执行的回调函数
+			},
+			cancel: function () {
+				alert('sahre qzone false')// 用户取消分享后执行的回调函数
+			}
+		});
+	});
+</script>
 <if condition="$isend">
 <link href="{:ADDON_PUBLIC_PATH}/xydzp.css?v={:SITE_VERSION}" rel="stylesheet"  type="text/css">
 <body class="xydzp-end">

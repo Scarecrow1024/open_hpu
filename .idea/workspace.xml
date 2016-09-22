@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="348cef5e-8e19-4309-a29b-2eb4603b5324" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php" afterPath="$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Addons/Xydzp/View/default/Public/js/init.js" afterPath="$PROJECT_DIR$/Addons/Xydzp/View/default/Public/js/init.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Addons/Xydzp/View/default/Xydzp/show.html" afterPath="$PROJECT_DIR$/Addons/Xydzp/View/default/Xydzp/show.html" />
     </list>
@@ -27,8 +28,8 @@
       <file leaf-file-name="BxqScoreController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="356" column="26" selection-start-line="356" selection-start-column="26" selection-end-line="356" selection-end-column="26" />
+            <state relative-caret-position="662">
+              <caret line="360" column="47" selection-start-line="317" selection-start-column="8" selection-end-line="360" selection-end-column="47" />
               <folding>
                 <element signature="e#45#85#0#PHP" expanded="true" />
               </folding>
@@ -39,8 +40,18 @@
       <file leaf-file-name="WeixinAddonModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Model/WeixinAddonModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
+            <state relative-caret-position="187">
               <caret line="28" column="56" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XydzpController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="646" column="50" selection-start-line="646" selection-start-column="50" selection-end-line="646" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -49,28 +60,18 @@
       <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
+            <state relative-caret-position="663">
+              <caret line="65" column="13" selection-start-line="26" selection-start-column="4" selection-end-line="65" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="show.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Addons/Xydzp/View/default/Xydzp/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="92" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="92" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="init.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Addons/Xydzp/View/default/Public/js/init.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+            <state relative-caret-position="153">
+              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -87,9 +88,9 @@
         <option value="$PROJECT_DIR$/Addons/BxqScore/Model/BxqScoreModel.class.php" />
         <option value="$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php" />
         <option value="$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html" />
+        <option value="$PROJECT_DIR$/Addons/Xydzp/View/default/Public/js/init.js" />
         <option value="$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php" />
         <option value="$PROJECT_DIR$/Addons/Xydzp/View/default/Xydzp/show.html" />
-        <option value="$PROJECT_DIR$/Addons/Xydzp/View/default/Public/js/init.js" />
       </list>
     </option>
   </component>
@@ -475,12 +476,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1474507380093</updated>
-      <workItem from="1474507382028" duration="11808000" />
+      <workItem from="1474507382028" duration="12161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11808000" />
+    <option name="totallyTimeSpent" value="12161000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -585,32 +586,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1370">
-          <caret line="614" column="64" selection-start-line="614" selection-start-column="16" selection-end-line="614" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Model/WeixinAddonModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="356" column="26" selection-start-line="356" selection-start-column="26" selection-end-line="356" selection-end-column="26" />
-          <folding>
-            <element signature="e#45#85#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/Xydzp/View/default/Xydzp/jpadd.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -667,26 +642,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/Xydzp/View/default/Public/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="147" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="147" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Addons/BxqScore/View/default/BxqScore/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
+        <state relative-caret-position="663">
+          <caret line="65" column="13" selection-start-line="26" selection-start-column="4" selection-end-line="65" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="662">
+          <caret line="360" column="47" selection-start-line="317" selection-start-column="8" selection-end-line="360" selection-end-column="47" />
+          <folding>
+            <element signature="e#45#85#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Model/WeixinAddonModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="28" column="56" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Addons/Xydzp/Controller/XydzpController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="646" column="50" selection-start-line="646" selection-start-column="50" selection-end-line="646" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/Xydzp/View/default/Xydzp/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="92" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Addons/Xydzp/View/default/Public/js/init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="153">
+          <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
           <folding />
         </state>
       </provider>

@@ -644,6 +644,7 @@ class XydzpController extends AddonsController
 					->order("zjdate desc")
 					->limit(10)
 					->select();
+                $this->assign('res',$this->share());
 				$this->assign('zjuserlist', $zjuserlist);            
 				$this->assign('canJoin', $canJoin);
 				$this->assign('cjnum', $cjnum);
@@ -652,6 +653,56 @@ class XydzpController extends AddonsController
 		}
 		$this->display(T('Addons://Xydzp@Xydzp/show'));
     }
+
+    public function share(){
+        //分享接口
+        if(isset($_SESSION['weiphp_home']['access_token'])){
+            $access_token = $_SESSION['weiphp_home']['access_token'];
+        }else{
+            $map ['token'] = 'gh_7a9f0bcfed65';
+            $info = M ( 'member_public' )->where ( $map )->find ();
+            $url_get = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $info ['appid'] . '&secret=' . $info ['secret'];
+
+            $ch1 = curl_init ();
+            $timeout = 5;
+            curl_setopt ( $ch1, CURLOPT_URL, $url_get );
+            curl_setopt ( $ch1, CURLOPT_RETURNTRANSFER, 1 );
+            curl_setopt ( $ch1, CURLOPT_CONNECTTIMEOUT, $timeout );
+            curl_setopt ( $ch1, CURLOPT_SSL_VERIFYPEER, FALSE );
+            curl_setopt ( $ch1, CURLOPT_SSL_VERIFYHOST, false );
+            $accesstxt = curl_exec ( $ch1 );
+            curl_close ( $ch1 );
+            $access = json_decode ( $accesstxt, true );
+            $access_token = $access['access_token'];
+            session('access_token',$access_token,7200);
+        }
+
+        if(isset($_SESSION['weiphp_home']['jsapi_ticket'])){
+            $jsapi_ticket = $_SESSION['weiphp_home']['jsapi_ticket'];
+        }else{
+            //GET请求获取jsapi 的 ticket
+            $jsapi = file_get_contents("https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$access_token."&type=jsapi");
+            $jsapi = json_decode($jsapi);
+            $j = get_object_vars($jsapi);
+            $jsapi_ticket = $j['ticket'];//get JSAPI
+            session('jsapi_ticket',$jsapi_ticket,7200);
+        }
+
+        //echo $access_token;
+        $timestamp = time();
+        $noncestr = "Wm3WZYTPz0wzccnW";
+        $url='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        $str1 = "jsapi_ticket=".$jsapi_ticket."&noncestr=".$noncestr."&timestamp=".$timestamp."&url=".$url."";
+        $signature = sha1($str1);
+        //echo $signature;
+
+        $res = array();
+        $res['timestamp'] = $timestamp;
+        $res['noncestr'] = $noncestr;
+        $res['signature'] = $signature;
+        return $res;
+    }
+
     function _getXydzpInfo($id)
     {
         // 检查ID是否合法

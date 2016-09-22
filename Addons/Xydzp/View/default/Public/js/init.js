@@ -1,12 +1,12 @@
  $(function() {
-             wx.config({
-                 debug: true,
-                 appId: 'wx8b7419eeb33a6e55',
-                 timestamp: ,
-                 nonceStr: '',
-                 signature: '',
-				 jsApiList: []
-             });
+            // wx.config({
+            //     debug: true, // ��������ģʽ,���õ�����api�ķ���ֵ���ڿͻ���alert��������Ҫ�鿴����Ĳ�����������pc�˴򿪣�������Ϣ��ͨ��log���������pc��ʱ�Ż��ӡ��
+            //     appId: 'wx8b7419eeb33a6e55', // ������ںŵ�Ψһ��ʶ
+            //     timestamp: , // �������ǩ����ʱ���
+            //     nonceStr: '', // �������ǩ���������
+            //     signature: '',// ���ǩ��������¼1
+            //     jsApiList: [] // �����Ҫʹ�õ�JS�ӿ��б�����JS�ӿ��б����¼2
+            // });
      
      
 				$("#wheelcanvas").rotate({
