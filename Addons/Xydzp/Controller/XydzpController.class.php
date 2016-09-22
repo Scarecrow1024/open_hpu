@@ -703,6 +703,10 @@ class XydzpController extends AddonsController
         return $res;
     }
 
+    function share_we(){
+        echo $_POST['openid'];
+    }
+
     function _getXydzpInfo($id)
     {
         // 检查ID是否合法
