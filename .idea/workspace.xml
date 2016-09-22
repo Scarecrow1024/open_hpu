@@ -26,8 +26,8 @@
       <file leaf-file-name="BxqScoreController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="336" column="27" selection-start-line="336" selection-start-column="27" selection-end-line="336" selection-end-column="27" />
+            <state relative-caret-position="445">
+              <caret line="335" column="35" selection-start-line="335" selection-start-column="29" selection-end-line="335" selection-end-column="35" />
               <folding>
                 <element signature="e#45#85#0#PHP" expanded="true" />
               </folding>
@@ -305,12 +305,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1474507380093</updated>
-      <workItem from="1474507382028" duration="3292000" />
+      <workItem from="1474507382028" duration="3439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3292000" />
+    <option name="totallyTimeSpent" value="3439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
@@ -385,8 +385,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/BxqScore/Controller/BxqScoreController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="336" column="27" selection-start-line="336" selection-start-column="27" selection-end-line="336" selection-end-column="27" />
+        <state relative-caret-position="445">
+          <caret line="335" column="35" selection-start-line="335" selection-start-column="29" selection-end-line="335" selection-end-column="35" />
           <folding>
             <element signature="e#45#85#0#PHP" expanded="true" />
           </folding>
