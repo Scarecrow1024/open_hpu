@@ -334,6 +334,7 @@ class BxqScoreController extends AddonsController{
         $jsapi = file_get_contents("https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$access_token."&type=jsapi");
         $jsapi = json_decode($jsapi, true);
         $jsapi_ticket = $jsapi['ticket'];
+        echo $jsapi_ticket;
         $timestamp = time();
         $noncestr = "Wm3WZYTPz0wzccnW";
         $url='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
