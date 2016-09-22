@@ -39,12 +39,15 @@
             ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
         });
         wx.ready(function(){
-            wx.checkJsApi({
-                jsApiList: ['chooseImage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
-                success: function(res) {
-                    // 以键值对的形式返回，可用的api值true，不可用为false
-                    // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
-                    alert('ok');
+            wx.onMenuShareTimeline({
+                title: '小微的成绩查询很好用', // 分享标题
+                link: 'http://www.baidu.com', // 分享链接
+                imgUrl: 'http://open.niool.com/index.php?s=/addon/BxqScore/BxqScore/verify.html', // 分享图标
+                success: function () {
+                    alert('share ok')// 用户确认分享后执行的回调函数
+                },
+                cancel: function () {
+                    alert('share false')// 用户取消分享后执行的回调函数
                 }
             });
         });
