@@ -7,5 +7,4 @@ use Home\Model;
  * BxqScore模型
  */
 class BxqScoreModel extends Model{
-   
 }
