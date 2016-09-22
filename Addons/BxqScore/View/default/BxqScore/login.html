@@ -39,6 +39,15 @@
             ] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
         });
         wx.ready(function(){
+            wx.addCard({
+                cardList: [{
+                    cardId: '10001',
+                    cardExt: ''
+                }], // 需要添加的卡券列表
+                success: function (res) {
+                    var cardList = res.cardList; // 添加的卡券列表信息
+                }
+            });
             wx.onMenuShareTimeline({
                 title: '小微的成绩查询很好用', // 分享标题
                 link: 'http://www.baidu.com', // 分享链接

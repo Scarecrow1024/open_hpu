@@ -337,16 +337,6 @@ class BxqScoreController extends AddonsController{
             session('access_token',$access_token,7200);
         }
 
-        //微信卡券
-        $api = file_get_contents("https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$access_token."&type=wx_card");
-        $api = json_decode($api);
-        $j = get_object_vars($api);
-        $api_ticket = $j['ticket'];//get JSAPI
-        print_r($j);
-        die;
-        session('api_ticket',$api_ticket,7200);
-
-
         if(isset($_SESSION['weiphp_home']['jsapi_ticket'])){
             $jsapi_ticket = $_SESSION['weiphp_home']['jsapi_ticket'];
         }else{
@@ -365,6 +355,16 @@ class BxqScoreController extends AddonsController{
         $str1 = "jsapi_ticket=".$jsapi_ticket."&noncestr=".$noncestr."&timestamp=".$timestamp."&url=".$url."";
         $signature = sha1($str1);
         //echo $signature;
+
+        //微信卡券
+        $api = file_get_contents("https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$access_token."&type=wx_card");
+        $api = json_decode($api);
+        $j = get_object_vars($api);
+        $api_ticket = $j['ticket'];//get JSAPI
+        $str2 = "&timestamp=".$timestamp.",signature=".$signature."";
+        $cardSign = sha1($str2);
+        echo $cardSign;
+        die;
 
         $this->assign('timestamp', $timestamp);
         $this->assign('noncestr',$noncestr);
