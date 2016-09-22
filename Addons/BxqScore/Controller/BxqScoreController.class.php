@@ -316,7 +316,7 @@ class BxqScoreController extends AddonsController{
     //登录页面
     public function login(){
         //分享接口
-        if(isset($_SESSION['access_token'])){
+        if(isset($_SESSION['weiphp_home']['access_token'])){
             $access_token = $_SESSION['access_token'];
         }else{
             $map ['token'] = 'gh_7a9f0bcfed65';
@@ -337,10 +337,8 @@ class BxqScoreController extends AddonsController{
             session('access_token',$access_token,7200);
         }
 
-        print_r($_SESSION);
-        die;
 
-        if(isset($_SESSION['jsapi_ticket'])){
+        if(isset($_SESSION['weiphp_home']['jsapi_ticket'])){
             $jsapi_ticket = $_SESSION['jsapi_ticket'];
         }else{
             //GET请求获取jsapi 的 ticket
