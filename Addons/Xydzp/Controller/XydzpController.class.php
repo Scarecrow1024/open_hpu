@@ -706,7 +706,12 @@ class XydzpController extends AddonsController
     function share_we(){
         $map ['uid'] = $_POST['openid'];
         $uinfo = M ( 'xydzp_userlog' )->where ( $map )->find ();
-        print_r($uinfo);
+        $uinfo['num'] = $uinfo['num']-1;
+        if(M('xydzp_userlog')->save()){
+            echo "1";
+        }else{
+            echo '2';
+        }
     }
 
     function _getXydzpInfo($id)
