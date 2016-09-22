@@ -38,8 +38,8 @@
       <file leaf-file-name="show.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Addons/Xydzp/View/default/Xydzp/show.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="270" column="16" selection-start-line="270" selection-start-column="16" selection-end-line="270" selection-end-column="16" />
+            <state relative-caret-position="680">
+              <caret line="274" column="18" selection-start-line="274" selection-start-column="18" selection-end-line="274" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -80,7 +80,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1924" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -392,18 +392,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1474507380093</updated>
-      <workItem from="1474507382028" duration="9802000" />
+      <workItem from="1474507382028" duration="10034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9802000" />
+    <option name="totallyTimeSpent" value="10034000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1924" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17811158" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17697228" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -578,8 +578,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Addons/Xydzp/View/default/Xydzp/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="270" column="16" selection-start-line="270" selection-start-column="16" selection-end-line="270" selection-end-column="16" />
+        <state relative-caret-position="680">
+          <caret line="274" column="18" selection-start-line="274" selection-start-column="18" selection-end-line="274" selection-end-column="18" />
           <folding />
         </state>
       </provider>
