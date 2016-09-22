@@ -648,7 +648,6 @@ class XydzpController extends AddonsController
 				$this->assign('canJoin', $canJoin);
 				$this->assign('cjnum', $cjnum);
 				$this->assign('joinurl', $joinurl);
-                $this->assign('url',$url);
 			}		
 		}
 		$this->display(T('Addons://Xydzp@Xydzp/show'));
