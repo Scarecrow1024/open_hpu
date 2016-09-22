@@ -183,17 +183,6 @@ class BxqScoreController extends AddonsController{
         }
     }
 
-    //登录页面
-    public function login(){   
-        $user=M('user');
-        $openid=get_openid();
-        $mm = $user->where("openid=".'"'.$openid.'"')->getField('password');
-        $studentid = $user->where("openid=".'"'.$openid.'"')->getField('studentid');
-        $this->assign('mm',$mm);
-        $this->assign('studentid',$studentid);
-        $this->display();
-    }
-
     //本学期成绩
     public function bxqcj(){
         if(isset($_COOKIE['isl'])){
@@ -321,6 +310,34 @@ class BxqScoreController extends AddonsController{
             $td_array[] = $td; 
         } 
         return $td_array; 
+    }
+
+    //登录页面
+    public function login(){
+        $map ['token'] = get_token ();
+        $info = M ( 'member_public' )->where ( $map )->find ();
+        $url_get = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $info ['appid'] . '&secret=' . $info ['secret'];
+
+        $ch1 = curl_init ();
+        $timeout = 5;
+        curl_setopt ( $ch1, CURLOPT_URL, $url_get );
+        curl_setopt ( $ch1, CURLOPT_RETURNTRANSFER, 1 );
+        curl_setopt ( $ch1, CURLOPT_CONNECTTIMEOUT, $timeout );
+        curl_setopt ( $ch1, CURLOPT_SSL_VERIFYPEER, FALSE );
+        curl_setopt ( $ch1, CURLOPT_SSL_VERIFYHOST, false );
+        $accesstxt = curl_exec ( $ch1 );
+        curl_close ( $ch1 );
+        $access = json_decode ( $accesstxt, true );
+        print_r($access);
+        die;
+
+        $user=M('user');
+        $openid=get_openid();
+        $mm = $user->where("openid=".'"'.$openid.'"')->getField('password');
+        $studentid = $user->where("openid=".'"'.$openid.'"')->getField('studentid');
+        $this->assign('mm',$mm);
+        $this->assign('studentid',$studentid);
+        $this->display();
     }
    
 }
