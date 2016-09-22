@@ -329,8 +329,12 @@ class BxqScoreController extends AddonsController{
         $accesstxt = curl_exec ( $ch1 );
         curl_close ( $ch1 );
         $access = json_decode ( $accesstxt, true );
-        print_r($access);
+        $access_token = $access['access_token'];
+        //GET请求获取jsapi
+        $jsapi = file_get_contents("https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$access_token."&type=jsapi");
+        print_r($jsapi);
         die;
+
 
         $user=M('user');
         $openid=get_openid();
