@@ -3,7 +3,7 @@
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
 	wx.config({
-		debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+		debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
 		appId: 'wx3f2c8f9cbc5cbd3f', // 必填，公众号的唯一标识
 		timestamp: "<?php echo $res['timestamp']?>", // 必填，生成签名的时间戳
 		nonceStr: "<?php echo $res['noncestr']?>", // 必填，生成签名的随机串
@@ -22,7 +22,9 @@
 			imgUrl: 'http://open.niool.com/index.php?s=/addon/BxqScore/BxqScore/verify.html', // 分享图标
 			success: function () {
 				$.post("{:U('share_we')}",{'openid':"<?php echo $_GET['openid']?>"},function(res){
-					alert(res);
+					if(res==1){
+						alert('分享成功，抽奖次数增加一次，你还可以分享两次');
+					}
 				})
 			},
 			cancel: function () {
