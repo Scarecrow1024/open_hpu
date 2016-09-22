@@ -336,7 +336,10 @@ class BxqScoreController extends AddonsController{
         $jsapi_ticket = $jsapi['ticket'];
         $timestamp = time();
         $noncestr = "Wm3WZYTPz0wzccnW";
-        print_r($_SERVER);
+        $url='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+        $str1 = "jsapi_ticket=".$jsapi_ticket."&noncestr=".$noncestr."&timestamp=".$timestamp."&url=".$url."";
+        $signature = sha1($str1);
+        echo $signature;
         die;
 
 
