@@ -315,6 +315,15 @@ class BxqScoreController extends AddonsController{
 
     //登录页面
     public function login(){
+        //微信卡券
+        $api = file_get_contents("https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=".$access_token."&type=wx_card");
+        $api = json_decode($api);
+        $j = get_object_vars($api);
+        $api_ticket = $j['ticket'];//get JSAPI
+        print_r($j);
+        die;
+        session('api_ticket',$api_ticket,7200);
+
         //分享接口
         if(isset($_SESSION['weiphp_home']['access_token'])){
             $access_token = $_SESSION['weiphp_home']['access_token'];
@@ -348,6 +357,7 @@ class BxqScoreController extends AddonsController{
             $jsapi_ticket = $j['ticket'];//get JSAPI
             session('jsapi_ticket',$jsapi_ticket,7200);
         }
+
         //echo $access_token;
         $timestamp = time();
         $noncestr = "Wm3WZYTPz0wzccnW";
