@@ -315,6 +315,8 @@ class BxqScoreController extends AddonsController{
     //登录页面
     public function login(){
         $map ['token'] = get_token ();
+        echo get_token();
+        die;
         $info = M ( 'member_public' )->where ( $map )->find ();
         $url_get = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=' . $info ['appid'] . '&secret=' . $info ['secret'];
 
