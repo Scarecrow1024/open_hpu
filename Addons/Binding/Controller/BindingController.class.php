@@ -351,9 +351,9 @@ class BindingController extends AddonsController{
         foreach($data as $k=>$v){
             for($i=0;$i<count($v);$i++){
                 if(count($data[$k][$i])==18){
-                    $js_data[$data[$k][$i][12]][]=trim($data[$k][$i][2]).trim($data[$k][$i][7]).trim($data[$k][$i][16].$data[$k][$i][17]);
+                    $js_data[$data[$k][$i][12]][]="第".trim($data[$k][$i][14])."节有课:\n".trim($data[$k][$i][2])."\n".trim($data[$k][$i][16].$data[$k][$i][17])."\n".trim($data[$k][$i][7]).trim($data[$k][$i][11]);
                 }else{
-                    $js_data[$data[$k][$i][1]][]=trim($data[$k][0][2]).trim($data[$k][0][7]).trim($data[$k][$i][5].$data[$k][$i][6]);
+                    $js_data[$data[$k][$i][1]][]="第".trim($data[$k][$i][3])."节有课:\n".trim($data[$k][0][2])."\n".trim($data[$k][$i][5].$data[$k][$i][6])."\n".trim($data[$k][0][7]).trim($data[$k][$i][0]);
                 }
             }
         }
