@@ -482,143 +482,25 @@ class BindingController extends AddonsController{
                 }   
             }
         }
-
-        //unset($data[21][0][0]);
-
         //return $data;
         $js_data=array();
         foreach($data as $k=>$v){
             for($i=0;$i<count($v);$i++){
                 if(count($data[$k][$i])==18){
                     $js_data[$data[$k][$i][12]][trim($data[$k][$i][13])]['score'][]=trim($data[$k][$i][2]);
-                    $js_data[$data[$k][$i][12]][trim($data[$k][$i][13])]['teacher'][]=trim($data[$k][$i][7]);
+                    $js_data[$data[$k][$i][12]][trim($data[$k][$i][13])]['teacher'][]=trim($data[$k][$i][7]).trim($data[$k][$i][11]);
                     $js_data[$data[$k][$i][12]][trim($data[$k][$i][13])]['add'][]=trim($data[$k][$i][16].$data[$k][$i][17]);
                     $js_data[$data[$k][$i][12]][trim($data[$k][$i][13])]['week'][]=trim($data[$k][$i][11]);
                 }else{
                     $js_data[$data[$k][$i][1]][trim($data[$k][$i][2])]['score'][]=trim($data[$k][0][2]);
-                    $js_data[$data[$k][$i][1]][trim($data[$k][$i][2])]['teacher'][]=trim($data[$k][0][7]);
+                    $js_data[$data[$k][$i][1]][trim($data[$k][$i][2])]['teacher'][]=trim($data[$k][0][7]).trim($data[$k][$i][0]);
                     $js_data[$data[$k][$i][1]][trim($data[$k][$i][2])]['add'][]=trim($data[$k][$i][5].$data[$k][$i][6]);
                     $js_data[$data[$k][$i][1]][trim($data[$k][$i][2])]['week'][]=trim($data[$k][$i][0]);
                 }
             }
         }
-
         $js_data=json_encode($js_data);
-
         return $js_data;
-
-        $con=count($arr);
-        //网页版课程表
-        $day=array();
-        for($i=1;$i<$con;$i++){
-            for($d=1;$d<=5;$d++){
-                if(count($arr[$i])==72){
-                //echo $arr[$i][2].$arr[$i][7]."\n";
-                if(trim($arr[$i][66])==$d){
-                    //$day[$d][]= "第".trim($arr[$i][12])."节有课:\n".trim($arr[$i][2])."\n".trim($arr[$i][15]).trim($arr[$i][16])."\n".trim($arr[$i][7]).trim($arr[$i][10]);
-                    $day[$d][]=array();
-                    for($j=1;$j<=9;$j++){
-                        if($j==trim($arr[$i][67])){
-                            $day[$d][$j]['score'][]=trim($arr[$i][56]);
-                            $day[$d][$j]['add'][]=trim($arr[$i][70]).trim($arr[$i][71]);
-                            $day[$d][$j]['teacher'][]=trim($arr[$i][61]).trim($arr[$i][65]);
-                        }
-                        
-                    }
-                }
-                }
-
-                if(count($arr[$i])==54){
-                //echo $arr[$i][2].$arr[$i][7]."\n";
-                if(trim($arr[$i][48])==$d){
-                    //$day[$d][]= "第".trim($arr[$i][12])."节有课:\n".trim($arr[$i][2])."\n".trim($arr[$i][15]).trim($arr[$i][16])."\n".trim($arr[$i][7]).trim($arr[$i][10]);
-                    $day[$d][]=array();
-                    for($j=1;$j<=9;$j++){
-                        if($j==trim($arr[$i][49])){
-                            $day[$d][$j]['score'][]=trim($arr[$i][38]);
-                            $day[$d][$j]['add'][]=trim($arr[$i][51]).trim($arr[$i][52]);
-                            $day[$d][$j]['teacher'][]=trim($arr[$i][43]).trim($arr[$i][47]);
-                        }
-                        
-                    }
-                }
-                }
-
-                if(count($arr[$i])==36){
-                //echo $arr[$i][2].$arr[$i][7]."\n";
-                if(trim($arr[$i][30])==$d){
-                    //$day[$d][]= "第".trim($arr[$i][12])."节有课:\n".trim($arr[$i][2])."\n".trim($arr[$i][15]).trim($arr[$i][16])."\n".trim($arr[$i][7]).trim($arr[$i][10]);
-                    $day[$d][]=array();
-                    for($j=1;$j<=9;$j++){
-                        if($j==trim($arr[$i][31])){
-                            $day[$d][$j]['score'][]=trim($arr[$i][20]);
-                            $day[$d][$j]['add'][]=trim($arr[$i][34]).trim($arr[$i][35]);
-                            $day[$d][$j]['teacher'][]=trim($arr[$i][25]).trim($arr[$i][29]);
-                        }
-                        
-                    }
-                }
-                }
-                if(count($arr[$i])==18){
-                //echo $arr[$i][2].$arr[$i][7]."\n";
-                if(trim($arr[$i][12])==$d){
-                    //$day[$d][]= "第".trim($arr[$i][12])."节有课:\n".trim($arr[$i][2])."\n".trim($arr[$i][15]).trim($arr[$i][16])."\n".trim($arr[$i][7]).trim($arr[$i][10]);
-                    $day[$d][]=array();
-                    for($j=1;$j<=9;$j++){
-                        if($j==trim($arr[$i][13])){
-                            $day[$d][$j]['score'][]=trim($arr[$i][2]);
-                            $day[$d][$j]['add'][]=trim($arr[$i][16]).trim($arr[$i][17]);
-                            $day[$d][$j]['teacher'][]=trim($arr[$i][7]).trim($arr[$i][11]);
-                        }
-                        
-                    }
-                }
-                }
-                if(count($arr[$i])==7){
-                    if(trim($arr[$i][1])==$d){
-                    //$day[$d][]= "第".trim($arr[$i][2])."节有课:\n".trim($arr[$i-1][2])."\n".trim($arr[$i][5]).trim($arr[$i][6])."\n".trim($arr[$i-1][7]).trim($arr[$i][0]);
-                    /*for($j=1;$j<=9;$j++){
-                        if($j==trim($arr[$i][2])){
-                            if(strlen(trim($arr[$i-1][2]))<2){
-                                $day[$d][$j]['score'][]=trim($arr[$i-2][2]);
-                                $day[$d][$j]['teacher'][]=trim($arr[$i-2][7]).trim($arr[$i][0]);
-                            }else{
-                                $day[$d][$j]['score'][]=trim($arr[$i-1][2]);
-                                $day[$d][$j]['teacher'][]=trim($arr[$i-1][7]).trim($arr[$i][0]);
-                            }
-                            $day[$d][$j]['add'][]=trim($arr[$i][5]).trim($arr[$i][6]);
-                            
-                        }
-                        
-                    }*/
-                    for($j=1;$j<=9;$j++){
-                        if($j==trim($arr[$i][2])){
-                          if(strlen(trim($arr[$i-1][2]))<2){
-                            if(strlen(trim($arr[$i-2][2]))<2){
-                              $day[$d][$j]['score'][]=trim($arr[$i-3][2]);
-                              $day[$d][$j]['teacher'][]=trim($arr[$i-3][7]).trim($arr[$i][0]);
-                            }else{
-                              $day[$d][$j]['score'][]=trim($arr[$i-2][2]);
-                              $day[$d][$j]['teacher'][]=trim($arr[$i-2][7]).trim($arr[$i][0]);
-                            }
-                            
-                          }else{
-                            $day[$d][$j]['score'][]=trim($arr[$i-1][2]);
-                            $day[$d][$j]['teacher'][]=trim($arr[$i-1][7]).trim($arr[$i][0]);
-                          }
-                            
-                            $day[$d][$j]['add'][]=trim($arr[$i][5]).trim($arr[$i][6]);
-                            $day[$d][$j]['teacher'][]=trim($arr[$i-1][6]).trim($arr[$i][0]);
-                        }
-                        
-                    }
-                }
-                }
-            }    
-        }
-        $day=json_encode($day);
-        //$day=addslashes($day);    
-        return $day;
     }
 
     //源课表
