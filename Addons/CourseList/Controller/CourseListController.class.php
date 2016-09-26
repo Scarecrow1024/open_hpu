@@ -10,8 +10,7 @@ class CourseListController extends AddonsController{
         $user=M('user');
         $data=$user->where("openid=".'"'.$openid.'"')->getField('webcourse');
         $day=json_decode($data,true);    
-        print_r($day);
-        die;
+
         $this->assign('day',$day);
         $this->display();        
     }
