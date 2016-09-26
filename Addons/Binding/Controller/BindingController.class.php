@@ -337,6 +337,9 @@ class BindingController extends AddonsController{
                     if(count($arr[$i+1])==7&&count($arr[$i+2])==7){
                         $data[$i][]=$arr[$i+2];
                     }
+                    if(count($arr[$i+1])==7&&count($arr[$i+3])==7){
+                        $data[$i][]=$arr[$i+3];
+                    }
                 }   
             }
         }
@@ -470,6 +473,9 @@ class BindingController extends AddonsController{
                     }
                     if(count($arr[$i+1])==7&&count($arr[$i+2])==7){
                         $data[$i][]=$arr[$i+2];
+                    }
+                    if(count($arr[$i+1])==7&&count($arr[$i+3])==7){
+                        $data[$i][]=$arr[$i+3];
                     }
                 }   
             }
