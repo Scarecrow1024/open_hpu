@@ -41,9 +41,9 @@ class WeixinAddonModel extends WeixinModel {
             $arr[0]['Title']=$title;
             $arr[0]['Url']=$url;
             $arr[0]['PicUrl']="http://imgsrc.baidu.com/forum/w%3D580/sign=b14afd2e0cf41bd5da53e8fc61da81a0/5c6409d162d9f2d39b783eeaabec8a136227ccde.jpg";
-            $arr[1]['Title']="点击图片可查看本周全部课表";
-            $arr[1]['Url']=$url;
-            foreach($data[7] as $v){
+            $arr[1]['Title']="点击图片可查看本周全部课表\n点我课查看空教室";
+            $arr[1]['Url']=$url2;
+            foreach($data[date("w")] as $v){
                 $arr[]['Title']=$v;
             }
 	            
