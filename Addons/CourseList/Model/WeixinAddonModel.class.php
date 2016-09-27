@@ -37,15 +37,15 @@ class WeixinAddonModel extends WeixinModel {
 	        $arr=array();
 	        $weekarray=array("日","一","二","三","四","五","六");
 
-	            $title="第一周星期".$weekarray[date("w")]."的课表如下";
-	            $arr[0]['Title']=$title;
-	            $arr[0]['Url']=$url;
-	            $arr[0]['PicUrl']="http://imgsrc.baidu.com/forum/w%3D580/sign=b14afd2e0cf41bd5da53e8fc61da81a0/5c6409d162d9f2d39b783eeaabec8a136227ccde.jpg";
-	            $arr[1]['Title']="温馨提示:回复解绑然后绑定可导入新学期课表\n点击图片可查看本周全部课表";
-	            $arr[1]['Url']=$url;
-	            foreach($data[6] as $v){
-	                $arr[]['Title']=$v;
-	            }
+            $title="第一周星期".$weekarray[date("w")]."的课表如下";
+            $arr[0]['Title']=$title;
+            $arr[0]['Url']=$url;
+            $arr[0]['PicUrl']="http://imgsrc.baidu.com/forum/w%3D580/sign=b14afd2e0cf41bd5da53e8fc61da81a0/5c6409d162d9f2d39b783eeaabec8a136227ccde.jpg";
+            $arr[1]['Title']="点击图片可查看本周全部课表";
+            $arr[1]['Url']=$url;
+            foreach($data[7] as $v){
+                $arr[]['Title']=$v;
+            }
 	            
 
 	        $this->replyNews($arr);
