@@ -36,14 +36,7 @@ class WeixinAddonModel extends WeixinModel {
 	        $data=json_decode($data,true);                   
 	        $arr=array();
 	        $weekarray=array("日","一","二","三","四","五","六");
-	        if($weekarray[date("w")]=="六"||$weekarray[date("w")]=="日"){
-	            $title="今天是星期".$weekarray[date("w")];
-	            $arr[0]['Title']=$title;
-	            $arr[0]['PicUrl']="http://imgsrc.baidu.com/forum/w%3D580/sign=b14afd2e0cf41bd5da53e8fc61da81a0/5c6409d162d9f2d39b783eeaabec8a136227ccde.jpg";
-	            $arr[0]['Url']=$url;
-	            $arr[1]['Title']="点我可查看空教室\n点击图片可查看全部课表";
-	            $arr[1]['Url']=$url2;
-	        }else{
+
 	            $title="第一周星期".$weekarray[date("w")]."的课表如下";
 	            $arr[0]['Title']=$title;
 	            $arr[0]['Url']=$url;
@@ -54,7 +47,6 @@ class WeixinAddonModel extends WeixinModel {
 	                $arr[]['Title']=$v;
 	            }
 	            
-	        }
 
 	        $this->replyNews($arr);
         }
