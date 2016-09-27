@@ -220,7 +220,7 @@ setTimeout(function(){
     <div id="tbody" style="height: 592px;">
         <div id="change_screen_div">
             <div class="tab_title">
-                <span style="margin-top: 5px;" id="month_span">第一周</span>
+                <span style="margin-top: 5px;" id="month_span">第4周</span>
                 <ul id="tab_title_ul">
                     <li style="margin-top: 4px;" class="black">周一</li>
                     <li style="margin-top: 4px;" class="">周二</li>
@@ -367,15 +367,15 @@ setTimeout(function(){
                 ai.q('#tab_title_ul > li:nth-child(' + (this.page+1) + ')').className = 'black';
             }
             var slipjs = slip('page',change_screen_ul,{
-                num: 5,
+                num: 7,
                 endFun: changeScreenEndFun
             });
             /* 初始化执行，跳到当前星期的课表信息 */
             var date = new Date();
             var week = date.getDay();
-            if (week != 6 && week != 0) {
+            /*if (week != 6 && week != 0) {
                 slipjs.toPage(week-1, 10);
-            }
+            }*/
     // 点击便签滑动到指定位置
     var ul = ai.q('#tab_title_ul');
     var li = ai.a('#tab_title_ul > li');
